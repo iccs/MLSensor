@@ -1,5 +1,8 @@
 package eu.alertproject.iccs.mlsensor.subscribers.kde.internal;
 
+import eu.alertproject.iccs.mlsensor.connector.producer.MLMessagePublisher;
+import eu.alertproject.iccs.mlsensor.subscribers.api.CompoundVisitor;
+import eu.alertproject.iccs.mlsensor.subscribers.api.MLMessagePublisherVisitor;
 import eu.alertproject.iccs.mlsensor.subscribers.api.MailParser;
 import eu.alertproject.iccs.mlsensor.subscribers.api.SimpleLoggerVisitor;
 import eu.alertproject.iccs.mlsensor.subscribers.kde.api.KdeDownloader;
@@ -36,6 +39,9 @@ public class KdeDownloaderImpl implements KdeDownloader {
 
     @Autowired
     MailParser mailParser;
+
+    @Autowired
+    MLMessagePublisher mlMessagePublisher;
 
     @Override
     public List<URL> fetchUrls(String url) throws IOException{
@@ -145,7 +151,10 @@ public class KdeDownloaderImpl implements KdeDownloader {
 
                     mailParser.parse(
                             FileUtils.lineIterator(extractedFile),
-                            new SimpleLoggerVisitor()
+                            new CompoundVisitor(
+                                new MLMessagePublisherVisitor(mlMessagePublisher),
+                                new SimpleLoggerVisitor()
+                            )
                     );
                 } catch (IOException e) {
                     throw e;

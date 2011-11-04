@@ -11,6 +11,8 @@
         <module>eu.alert-project.iccs.mlsensor.connector</module>
         <module>eu.alert-project.iccs.mlsensor.subscribers</module>
         <module>eu.alert-project.iccs.mlsensor.conf</module>
+        <module>eu.alert-project.iccs.mlsensor.web</module>
+        <module>eu.alert-project.iccs.mlsensor.consumer-test</module>
     </modules>
     <name>ALERT - MLSensor core</name>
     <packaging>pom</packaging>
@@ -183,6 +185,30 @@
                 <groupId>com.thoughtworks.xstream</groupId>
                 <artifactId>xstream</artifactId>
                 <version>1.3.1</version>
+            </dependency>
+
+
+            <dependency>
+                <groupId>javax.jms</groupId>
+                <artifactId>jms</artifactId>
+                <version>1.1</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.activemq</groupId>
+                <artifactId>activemq-core</artifactId>
+                <version>5.5.1</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.activemq</groupId>
+                <artifactId>activemq-pool</artifactId>
+                <version>5.5.1</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.activemq</groupId>
+                <artifactId>activemq-camel</artifactId>
+                <version>5.5.1</version>
             </dependency>
 
             <!-- JPA -->

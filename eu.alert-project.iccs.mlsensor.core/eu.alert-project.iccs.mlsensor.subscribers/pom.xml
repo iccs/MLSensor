@@ -18,6 +18,7 @@
 
 
     <dependencies>
+
         <dependency>
             <groupId>eu.alert-project.iccs.mlsensor</groupId>
             <version>${project.parent.version}</version>

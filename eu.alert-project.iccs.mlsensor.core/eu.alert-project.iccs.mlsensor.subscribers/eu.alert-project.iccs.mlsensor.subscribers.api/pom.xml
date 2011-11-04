@@ -17,6 +17,14 @@
             <artifactId>spring-context</artifactId>
             <version>${org.springframework.version}</version>
         </dependency>
+
+        <dependency>
+            <groupId>eu.alert-project.iccs.mlsensor</groupId>
+            <version>${project.version}</version>
+            <artifactId>connector</artifactId>
+        </dependency>
+
+
     </dependencies>
 
 </project>
