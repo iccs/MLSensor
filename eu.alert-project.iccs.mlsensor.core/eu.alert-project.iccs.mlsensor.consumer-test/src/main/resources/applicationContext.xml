@@ -41,18 +41,20 @@
 
     <bean id="mlMessageListener" class="eu.alertproject.iccs.mlsensor.connector.subscriber.ActiveMQMessageListener"/>
 
-    <bean id="cscoConsumer" class="org.springframework.jms.listener.DefaultMessageListenerContainer">
+    <bean id="iccsMlNewMailConsumer" class="org.springframework.jms.listener.DefaultMessageListenerContainer">
         <property name="connectionFactory" ref="jmsConnectionFactory"/>
-        <property name="destination" ref="cscoDest"/>
+        <property name="destination">
+            <bean
+                class="org.apache.activemq.command.ActiveMQTopic">
+                <constructor-arg value="ICCS.Its.NewEmail" />
+            </bean>
+        </property>
         <property name="messageListener" ref="mlMessageListener"/>
     </bean>
 
     <!-- Spring JMS Template -->
     <bean id="jmsTemplate" class="org.springframework.jms.core.JmsTemplate">
         <property name="connectionFactory" ref="pooledJmsConnectionFactory" />
-    </bean>
-
-    <bean id="cscoDest" class="org.apache.activemq.command.ActiveMQTopic"> <constructor-arg value="STOCKS.CSCO" />
     </bean>
 
 </beans>

@@ -24,7 +24,35 @@ public class MailMessageCreator implements MessageCreator {
     public Message createMessage(Session session) throws JMSException {
 
         Message m= session.createMessage();
-        m.setStringProperty("Message",message);
+
+
+        /*
+        {
+            "profile":{},
+            "action":{
+                "from":"Fotis Paraskevopoulos <hello@world.com>",
+                "date":"Mon, 15 Sep 2008 15:13:04 +0200",
+                "subject":"What is up !",
+                "text":"This is a long long text"
+            }
+
+        }
+
+
+         */
+
+        m.setStringProperty("Message",
+                 "        {\n" +
+                         "            \"profile\":{},\n" +
+                         "            \"action\":{\n" +
+                         "                \"from\":\"Fotis Paraskevopoulos <hello@world.com>\",\n" +
+                         "                \"date\":\"Mon, 15 Sep 2008 15:13:04 +0200\",\n" +
+                         "                \"subject\":\"What is up !\",\n" +
+                         "                \"text\":\"This is a long long text\"\n" +
+                         "            }\n" +
+                         "        \n" +
+                         "        }"
+                );
         return m;
     }
 }

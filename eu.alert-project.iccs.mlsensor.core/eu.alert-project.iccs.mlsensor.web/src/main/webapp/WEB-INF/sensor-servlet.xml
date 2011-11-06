@@ -79,9 +79,7 @@
     <!-- Spring JMS Template -->
     <bean id="jmsTemplate" class="org.springframework.jms.core.JmsTemplate">
         <property name="connectionFactory" ref="pooledJmsConnectionFactory" />
-    </bean>
-
-    <bean id="cscoDest" class="org.apache.activemq.command.ActiveMQTopic"> <constructor-arg value="STOCKS.CSCO" />
+        <property name="pubSubDomain" value="true"/>
     </bean>
 
 </beans>

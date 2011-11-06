@@ -32,6 +32,12 @@
             <artifactId>activemq-camel</artifactId>
         </dependency>
 
+        <dependency>
+            <groupId>eu.alert-project.iccs.stardom</groupId>
+            <artifactId>connector</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+
 
     </dependencies>
 

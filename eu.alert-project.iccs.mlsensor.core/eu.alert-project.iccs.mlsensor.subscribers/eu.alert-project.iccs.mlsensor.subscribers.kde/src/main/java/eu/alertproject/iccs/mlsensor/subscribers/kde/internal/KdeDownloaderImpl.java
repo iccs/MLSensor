@@ -135,19 +135,25 @@ public class KdeDownloaderImpl implements KdeDownloader {
                 FileOutputStream output = null;
 
                 try {
-                    //now we need to extract it
-                    gis = new GZIPInputStream(new FileInputStream(iccs));
 
-                    logger.trace("void loadMessages() Extracting {}",iccs.getName());
+                    if (data.endsWith(".gz")) {
+                        //now we need to extract it
+                        gis = new GZIPInputStream(new FileInputStream(iccs));
+
+
+                    } else {
+                        gis = new FileInputStream(iccs);
+                    }
+
+                    logger.trace("void loadMessages() Extracting {}", iccs.getName());
                     File extractedFile = new File(iccs.getParent(),
-                            StringUtils.substringBeforeLast(iccs.getName(), ".")+".txt"
+                            StringUtils.substringBeforeLast(iccs.getName(), ".") + ".txt"
                     );
-
                     output = new FileOutputStream(
                             extractedFile
                     );
 
-                    IOUtils.copyLarge(gis,output);
+                    IOUtils.copyLarge(gis, output);
 
                     mailParser.parse(
                             FileUtils.lineIterator(extractedFile),

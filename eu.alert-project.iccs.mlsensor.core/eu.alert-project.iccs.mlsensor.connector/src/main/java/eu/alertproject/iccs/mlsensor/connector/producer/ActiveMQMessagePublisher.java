@@ -1,5 +1,6 @@
 package eu.alertproject.iccs.mlsensor.connector.producer;
 
+import eu.alertproject.iccs.stardom.connector.api.Topics;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,20 +17,18 @@ import javax.jms.Destination;
  */
 @Component("mlMessagePublisher")
 public class ActiveMQMessagePublisher implements MLMessagePublisher{
+
     private Logger logger = LoggerFactory.getLogger(ActiveMQMessagePublisher.class);
 
     @Autowired
     private JmsTemplate template;
 
-    @Autowired
-    private Destination cscoDest;
 
     @Override
     public void sendMessage(String message){
-
-        logger.trace("void sendMessage()");
+        logger.trace("void sendMessage() {} ",message);
         template.send(
-                cscoDest,
+                Topics.IccsMlNewMail,
                 new MailMessageCreator(message)
         );
     }

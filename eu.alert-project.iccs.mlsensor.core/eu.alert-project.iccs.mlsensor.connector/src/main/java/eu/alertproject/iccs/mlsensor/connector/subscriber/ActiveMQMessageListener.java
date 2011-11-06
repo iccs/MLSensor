@@ -8,6 +8,7 @@ import org.springframework.stereotype.Component;
 import javax.jms.JMSException;
 import javax.jms.Message;
 import javax.jms.TextMessage;
+import java.io.IOException;
 
 /**
  * User: fotis
@@ -25,14 +26,17 @@ public class ActiveMQMessageListener implements MLMessageListener{
 
         logger.trace("void onMessage() Received {} ",message);
         try {
+
             if(message instanceof ActiveMQMessage){
-                String text = null;
-                text = ((TextMessage) message).getText();
-                logger.trace("void onMessage() {}",text);
+                ActiveMQMessage mqMessage = (ActiveMQMessage) message;
+                logger.trace("void onMessage() {}",mqMessage.getProperty("Message"));
             }
-        } catch (JMSException e) {
-            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+
+        } catch (IOException e) {
+            logger.error("Error reading the message", e);
         }
 
     }
+
+
 }
