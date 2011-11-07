@@ -27,15 +27,15 @@ public class ActiveMQMessageListener implements MLMessageListener{
         logger.trace("void onMessage() Received {} ",message);
         try {
 
-            if(message instanceof ActiveMQMessage){
-                ActiveMQMessage mqMessage = (ActiveMQMessage) message;
-                logger.trace("void onMessage() {}",mqMessage.getProperty("Message"));
+            if(message instanceof TextMessage){
+                TextMessage mqmessage = (TextMessage) message;
+                logger.trace("void onMessage() {}",mqmessage.getText());
+            }else{
+                logger.info("This message is not of type TextMessage");
             }
-
-        } catch (IOException e) {
-            logger.error("Error reading the message", e);
+        } catch (JMSException e) {
+            logger.error("Error reading contents of text message",e);
         }
-
     }
 
 

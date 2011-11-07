@@ -5,6 +5,7 @@ import org.springframework.jms.core.MessageCreator;
 import javax.jms.JMSException;
 import javax.jms.Message;
 import javax.jms.Session;
+import javax.jms.TextMessage;
 
 /**
  * User: fotis
@@ -23,7 +24,7 @@ public class MailMessageCreator implements MessageCreator {
     @Override
     public Message createMessage(Session session) throws JMSException {
 
-        Message m= session.createMessage();
+        TextMessage m= session.createTextMessage();
 
 
         /*
@@ -41,18 +42,17 @@ public class MailMessageCreator implements MessageCreator {
 
          */
 
-        m.setStringProperty("Message",
-                 "        {\n" +
-                         "            \"profile\":{},\n" +
-                         "            \"action\":{\n" +
-                         "                \"from\":\"Fotis Paraskevopoulos <hello@world.com>\",\n" +
-                         "                \"date\":\"Mon, 15 Sep 2008 15:13:04 +0200\",\n" +
-                         "                \"subject\":\"What is up !\",\n" +
-                         "                \"text\":\"This is a long long text\"\n" +
-                         "            }\n" +
-                         "        \n" +
-                         "        }"
-                );
+        m.setText("        {\n" +
+                        "            \"profile\":{},\n" +
+                        "            \"action\":{\n" +
+                        "                \"from\":\"Fotis Paraskevopoulos <hello@world.com>\",\n" +
+                        "                \"date\":\"Mon, 15 Sep 2008 15:13:04 +0200\",\n" +
+                        "                \"subject\":\"What is up !\",\n" +
+                        "                \"text\":\"This is a long long text\"\n" +
+                        "            }\n" +
+                        "        \n" +
+                        "        }"
+        );
         return m;
     }
 }

@@ -24,6 +24,8 @@ public class ActiveMQMessagePublisher implements MLMessagePublisher{
     private JmsTemplate template;
 
 
+    private int messageCount = 0;
+
     @Override
     public void sendMessage(String message){
         logger.trace("void sendMessage() {} ",message);
@@ -31,6 +33,9 @@ public class ActiveMQMessagePublisher implements MLMessagePublisher{
                 Topics.IccsMlNewMail,
                 new MailMessageCreator(message)
         );
+
+        logger.debug("Sending message {} ",messageCount++);
+
     }
 
 }

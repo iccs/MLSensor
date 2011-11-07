@@ -46,7 +46,7 @@
         <property name="destination">
             <bean
                 class="org.apache.activemq.command.ActiveMQTopic">
-                <constructor-arg value="ICCS.Its.NewEmail" />
+                <constructor-arg value="eu.alertproject.iccs.stardom.connector.api.Topics.IccsMlNewMail" />
             </bean>
         </property>
         <property name="messageListener" ref="mlMessageListener"/>
