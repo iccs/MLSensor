@@ -1,0 +1,1671 @@
+From: michael.larouche at kdemail.net (=?iso-8859-1?q?Micha=EBl_Larouche?=)
+Date: Wed, 04 Jan 2006 12:29:31 -0500
+Subject: [Kde-hardware-devel] Offerring my help.
+Message-ID: <200601041229.34151.michael.larouche@kdemail.net>
+
+Like I said on #solid. I offer my help of the Solid project.
+
+Note that I don't know anything yet about low-level system programming but
+I'll learn with the time.
+
+My area of interests are the hardware and network integration. Also maybe work
+in collaboration with Plasma team.
+
+--
+Micha?l Larouche (Shock The Dark Mage)
+KDE developer working on Kopete, Kamefu...on dial-up :P
+--------------------------------------
+Blog: http://mlarouche.blogspot.com/
+MSN/Email: michael.larouche at kdemail.net
+IRC: irc.freenode.org/DarkShock on #kopete, #kde-devel, #kde4-devel, #plasma,
+#kamefu
+Jabber: darkshock at myjabber.net, darkshock at linux-quebec.org,
+darkshock at gmail.com
+AIM: darkshock19
+Gadu-Gadu: 1172438
+ICQ: 29644783
+Yahoo: darkshock_TT
+
+From: waldo.bastian at intel.com (Bastian, Waldo)
+Date: Wed, 4 Jan 2006 16:41:07 -0800
+Subject: [Kde-hardware-devel] networkstatus
+Message-ID: <8AEB79DC01BE994D8DE3FD02FA5B475B027CED5E@orsmsx409>
+
+Is the networkstatus module from kdepim/networkstatus to be included as
+part of Solid?
+
+
+
+Cheers,
+
+Waldo
+
+
+
+Linux Client Architect - Channel Software Operation - Intel Corporation
+
+
+
+
+From: mattchorman at gmail.com (Matt Chorman)
+Date: Wed, 4 Jan 2006 19:48:35 -0800
+Subject: [Kde-hardware-devel] Source question
+Message-ID: <200601041949.35644.mattchorman@gmail.com>
+
+At the risk of appearing blind...
+
+I can't seem to find any source or documentation anywhere... I have found this
+though:
+
+"The APIs for working with and improving Solid will appear here as they become
+available. First uploads of the API documentation to this website will likely
+occur in Q2 2006 given the current roadmap. They will undoubtedly be
+available sooner than that in KDE's subversion code repository where you are
+welcome to track Solid development as it happens."
+
+Has there been any public development of the API or is it still private at
+this point? Will the solid repo be added to the kde4 branch?
+
+Thanks,
+Matt
+
+From: michael.larouche at kdemail.net (=?iso-8859-1?q?Micha=EBl_Larouche?=)
+Date: Wed, 04 Jan 2006 23:48:57 -0500
+Subject: [Kde-hardware-devel] Source question
+In-Reply-To: <200601041949.35644.mattchorman@gmail.com>
+References: <200601041949.35644.mattchorman@gmail.com>
+Message-ID: <200601042349.00582.michael.larouche@kdemail.net>
+
+Le January 4, 2006 22:48, Matt Chorman a ?crit?:
+> At the risk of appearing blind...
+>
+> I can't seem to find any source or documentation anywhere... I have found
+> this though:
+>
+> "The APIs for working with and improving Solid will appear here as they
+> become available. First uploads of the API documentation to this website
+> will likely occur in Q2 2006 given the current roadmap. They will
+> undoubtedly be available sooner than that in KDE's subversion code
+> repository where you are welcome to track Solid development as it happens."
+>
+> Has there been any public development of the API or is it still private at
+> this point? Will the solid repo be added to the kde4 branch?
+>
+> Thanks,
+> Matt
+
+You can find a start of Solid in SVN here:
+
+/branches/work/kdehw/
+--
+Micha?l Larouche (Shock The Dark Mage)
+KDE developer working on Kopete, Kamefu...on dial-up :P
+--------------------------------------
+Blog: http://mlarouche.blogspot.com/
+MSN/Email: michael.larouche at kdemail.net
+IRC: irc.freenode.org/DarkShock on #kopete,#solid,#kamefu,#plasma
+Jabber: darkshock at myjabber.net
+
+From: nkayesmith at gmail.com (Nicholas Kaye-Smith)
+Date: Thu, 5 Jan 2006 15:24:05 +1000
+Subject: [Kde-hardware-devel] Solid Knowledge Base
+Message-ID: <273997e40601042124w38384677j@mail.gmail.com>
+
+I am interested in helping the development the Solid Knowledge Base. I know
+PHP - though I have not worked in Object-Oriented PHP before, I know other
+O-O languages, such as basic C++, and know the theory behind O-O.
+How would I get involved?
+Nicholas
+
+From: mattchorman at gmail.com (Matt Chorman)
+Date: Wed, 4 Jan 2006 21:27:50 -0800
+Subject: [Kde-hardware-devel] Source question
+In-Reply-To: <200601042349.00582.michael.larouche@kdemail.net>
+References: <200601041949.35644.mattchorman@gmail.com>
+	<200601042349.00582.michael.larouche@kdemail.net>
+Message-ID: <200601042128.04023.mattchorman@gmail.com>
+
+Perfect! Just a suggestion, you might want to add this tidbit of knowledge to
+your website when you get a chance. ;-)
+
+Also, do you have a wiki in the works, or any plans to add one? With a project
+as diverse and complex as this one will turn out to be, it might not be a bad
+idea.
+--
+Matt
+
+On Wednesday 04 January 2006 8:48 pm, Micha?l Larouche wrote:
+<snip>
+> You can find a start of Solid in SVN here:
+>
+> /branches/work/kdehw/
+
+From: nkayesmith at gmail.com (Nicholas Kaye-Smith)
+Date: Thu, 5 Jan 2006 16:02:18 +1000
+Subject: [Kde-hardware-devel] Source question
+In-Reply-To: <200601042128.04023.mattchorman@gmail.com>
+References: <200601041949.35644.mattchorman@gmail.com>
+	<200601042349.00582.michael.larouche@kdemail.net>
+	<200601042128.04023.mattchorman@gmail.com>
+Message-ID: <273997e40601042202o691a4d48o@mail.gmail.com>
+
+I can help with that.
+Also, do you want to set the reply-to address to "This List" in Mailman,
+because when I press reply the default reply address is the previous
+'poster'?
+Nicholas
+
+On 05/01/06, Matt Chorman <mattchorman at gmail.com> wrote:
+>
+> Perfect! Just a suggestion, you might want to add this tidbit of knowledge
+> to
+> your website when you get a chance. ;-)
+>
+> Also, do you have a wiki in the works, or any plans to add one? With a
+> project
+> as diverse and complex as this one will turn out to be, it might not be a
+> bad
+> idea.
+> --
+> Matt
+>
+> On Wednesday 04 January 2006 8:48 pm, Micha?l Larouche wrote:
+> <snip>
+> > You can find a start of Solid in SVN here:
+> >
+> > /branches/work/kdehw/
+>
+>
+> _______________________________________________
+> Kde-hardware-devel mailing list
+> Kde-hardware-devel at kde.org
+> https://mail.kde.org/mailman/listinfo/kde-hardware-devel
+>
+>
+>
+>
+
+From: ervin at kde.org (Kevin Ottens)
+Date: Thu, 5 Jan 2006 10:32:13 +0100
+Subject: [Kde-hardware-devel] Offerring my help.
+In-Reply-To: <200601041229.34151.michael.larouche@kdemail.net>
+References: <200601041229.34151.michael.larouche@kdemail.net>
+Message-ID: <200601051032.20044.ervin@kde.org>
+
+Le Mercredi 4 Janvier 2006 18:29, Micha?l Larouche a ?crit :
+> Note that I don't know anything yet about low-level system programming but
+> I'll learn with the time.
+
+Sure, I don't expect everybody to master how to deal with the low-level
+layers. Anyway we need people to write applications using Solid. In
+particular small helper applications will be important. The first one being
+surely the hardware browser that will help us as developers too. With the
+current version of libkdehw it's even possible to experiment and write small
+tools cloning lshal or hal-device-manager behavior (which are quite handy
+tools).
+
+> My area of interests are the hardware and network integration. Also maybe
+> work in collaboration with Plasma team.
+
+You'll surely be interested in working on the future Plasma engine then. The
+library is not ready yet to build this engine, but in the mean time, it'd
+interesting to collect needs for Plasma applets. From here it'll be easier to
+know which information should be available or not through this engine (some
+of them might be overkill for applets).
+
+Regards.
+--
+K?vin 'ervin' Ottens, http://ervin.ipsquad.net
+"Ni le ma?tre sans disciple, Ni le disciple sans ma?tre,
+Ne font reculer l'ignorance."
+
+From: ervin at kde.org (Kevin Ottens)
+Date: Thu, 5 Jan 2006 10:42:51 +0100
+Subject: [Kde-hardware-devel] networkstatus
+In-Reply-To: <8AEB79DC01BE994D8DE3FD02FA5B475B027CED5E@orsmsx409>
+References: <8AEB79DC01BE994D8DE3FD02FA5B475B027CED5E@orsmsx409>
+Message-ID: <200601051042.51401.ervin@kde.org>
+
+Hi Waldo,
+
+Le Jeudi 5 Janvier 2006 01:41, Bastian, Waldo a ?crit :
+> Is the networkstatus module from kdepim/networkstatus to be included as
+> part of Solid?
+
+To be honest I have no clear plan about kdepim/networkstatus, simply because I
+didn't find time yet to look at it in details.
+
+AFAIK, some parts could be reused but IIRC some of them are specific to some
+PIM needs (please correct me if I'm wrong). If I'm not mistaken, that means
+that it could partly migrate to kdelibs (where our main library will be) and
+hopefully the remaining bits will be simpler to implement.
+
+As I said for networkstatus my plans are not very clear yet (I'm currently
+dealing with lower level stuff), but feel free to give me more information or
+advices, it'll be very valuable IMHO.
+
+Regards.
+--
+K?vin 'ervin' Ottens, http://ervin.ipsquad.net
+"Ni le ma?tre sans disciple, Ni le disciple sans ma?tre,
+Ne font reculer l'ignorance."
+
+From: ervin at kde.org (Kevin Ottens)
+Date: Thu, 5 Jan 2006 10:51:48 +0100
+Subject: [Kde-hardware-devel] Solid Knowledge Base
+In-Reply-To: <273997e40601042124w38384677j@mail.gmail.com>
+References: <273997e40601042124w38384677j@mail.gmail.com>
+Message-ID: <200601051051.48442.ervin@kde.org>
+
+Le Jeudi 5 Janvier 2006 06:24, Nicholas Kaye-Smith a ?crit :
+> I am interested in helping the development the Solid Knowledge Base. I know
+> PHP - though I have not worked in Object-Oriented PHP before, I know other
+> O-O languages, such as basic C++, and know the theory behind O-O.
+> How would I get involved?
+
+Currently the knowledge base is more or less in standby. I'd say we need at
+least one person with strong knowledge in web application designing.
+
+That said, I think that a small team of motivated people could design
+something really interesting.
+
+Currently I'd like to see some discussions about more detailed features we
+could provide to the user, I've some ideas myself, but I guess we can come up
+with more. Hm, that really show the need of a wiki again... I'll see with the
+people hosting the website what can be done, I'll come back to the list when
+we'll have something in place.
+
+Regards.
+--
+K?vin 'ervin' Ottens, http://ervin.ipsquad.net
+"Ni le ma?tre sans disciple, Ni le disciple sans ma?tre,
+Ne font reculer l'ignorance."
+
+From: mattchorman at gmail.com (Matt Chorman)
+Date: Thu, 5 Jan 2006 06:23:19 -0800
+Subject: [Kde-hardware-devel] Solid Knowledge Base
+In-Reply-To: <200601051051.48442.ervin@kde.org>
+References: <273997e40601042124w38384677j@mail.gmail.com>
+	<200601051051.48442.ervin@kde.org>
+Message-ID: <200601050623.27330.mattchorman@gmail.com>
+
+I think the web app could be developed separately from the wiki. The wiki
+could be for things like documenting the API status and members, FAQs and
+svn/build info, etc.
+
+Please let us know if you can't get a wiki on the website where solid is
+currently being hosted.. I'm sure somebody can come up with a wiki if
+necessary.. ;-)
+
+--
+Matt
+On Thursday 05 January 2006 1:51 am, Kevin Ottens wrote:
+> Le Jeudi 5 Janvier 2006 06:24, Nicholas Kaye-Smith a ?crit :
+> > I am interested in helping the development the Solid Knowledge Base. I
+> > know PHP - though I have not worked in Object-Oriented PHP before, I know
+> > other O-O languages, such as basic C++, and know the theory behind O-O.
+> > How would I get involved?
+>
+> Currently the knowledge base is more or less in standby. I'd say we need at
+> least one person with strong knowledge in web application designing.
+>
+> That said, I think that a small team of motivated people could design
+> something really interesting.
+>
+> Currently I'd like to see some discussions about more detailed features we
+> could provide to the user, I've some ideas myself, but I guess we can come
+> up with more. Hm, that really show the need of a wiki again... I'll see
+> with the people hosting the website what can be done, I'll come back to the
+> list when we'll have something in place.
+>
+> Regards.
+
+From: jr.falleri at gmail.com (Jean-Remy Falleri)
+Date: Thu, 5 Jan 2006 15:31:48 +0100
+Subject: [Kde-hardware-devel] Solid Knowledge Base
+In-Reply-To: <200601050623.27330.mattchorman@gmail.com>
+References: <273997e40601042124w38384677j@mail.gmail.com>
+	<200601051051.48442.ervin@kde.org>
+	<200601050623.27330.mattchorman@gmail.com>
+Message-ID: <f0ff898c0601050631m40f36bdfi@mail.gmail.com>
+
+Maybe wiki.kde.org should be the right place for this kind of stuff?
+
+2006/1/5, Matt Chorman <mattchorman at gmail.com>:
+> I think the web app could be developed separately from the wiki. The wiki
+> could be for things like documenting the API status and members, FAQs and
+> svn/build info, etc.
+>
+> Please let us know if you can't get a wiki on the website where solid is
+> currently being hosted.. I'm sure somebody can come up with a wiki if
+> necessary.. ;-)
+>
+> --
+> Matt
+> On Thursday 05 January 2006 1:51 am, Kevin Ottens wrote:
+> > Le Jeudi 5 Janvier 2006 06:24, Nicholas Kaye-Smith a ?crit :
+> > > I am interested in helping the development the Solid Knowledge Base. I
+> > > know PHP - though I have not worked in Object-Oriented PHP before, I know
+> > > other O-O languages, such as basic C++, and know the theory behind O-O.
+> > > How would I get involved?
+> >
+> > Currently the knowledge base is more or less in standby. I'd say we need at
+> > least one person with strong knowledge in web application designing.
+> >
+> > That said, I think that a small team of motivated people could design
+> > something really interesting.
+> >
+> > Currently I'd like to see some discussions about more detailed features we
+> > could provide to the user, I've some ideas myself, but I guess we can come
+> > up with more. Hm, that really show the need of a wiki again... I'll see
+> > with the people hosting the website what can be done, I'll come back to the
+> > list when we'll have something in place.
+> >
+> > Regards.
+>
+>
+> _______________________________________________
+> Kde-hardware-devel mailing list
+> Kde-hardware-devel at kde.org
+> https://mail.kde.org/mailman/listinfo/kde-hardware-devel
+>
+>
+>
+>
+
+
+--
+Jean-Remy Falleri
+jr.falleri at gmail.com
+
+From egaumer at pagecache.org  Thu Jan  5 17:41:21 2006
+From: egaumer at pagecache.org (Eric Gaumer)
+Date: Thu, 5 Jan 2006 08:41:21 -0800
+Subject: [Kde-hardware-devel] Core Libraries
+Message-ID: <200601050841.23424.egaumer@pagecache.org>
+
+What will be the underlying code that Solid will use to manipulate network
+hardware?
+
+The reason I ask is because I'm currently working on creating a library based
+on iproute2. This would give applications the ability to perform direct
+operations on network hardware.
+
+My vision is a network daemon that unifies all aspects of network
+configuration across desktops as well as distributions. This would eliminate
+things like ifup/ifdown and even replace ip or ifconfig. The daemon would
+also be able to store network profiles internally across reboots.
+
+The actual daemon part comes into play by using the DBUS technology to push
+network events (i.e., new 802.11 network discovered or cable unplugged,
+etc...) out to applications that are "network aware".
+
+My vision is similar to RedHat's NetworkManager project but goes beyond that
+by providing a complete replacement for most, if not all, network start-up
+scripts and providing a uniform mechanism for any Linux desktop to build
+tools around.
+
+My motivation is this; network management sucks on Linux. Sure if you like to
+hack you can always ease the burden but users like mom are completeting left
+hanging.
+
+I was very happy to see this project come along and I definitely think it's a
+step in the right direction.
+
+There isn't a whole lot of information given it's infancy so I'm not sure what
+the API will be built upon.
+
+I'd be interested in getting involved. I can program C/C++ and Python. Most of
+my work with the QT/KDE API has been with Python. I'd be more interested in
+the core libraries.
+
+Can anyone give some insight as to how the project plans to interact with
+network hardware and wether or not something like libiproute2.so would be
+helpful in achieving these goals?
+
+I have a crude working library just as a proof of concept. The iproute code
+uses some global variables that I'd need to clean up and I'd probably wrap
+some of the functions to provide a more consice API. Eventually the ip
+frontend would simply link to libiproute2 or disappear completely but the
+option handling is messy as it stands. I'd consider implementing a finite
+state machine to handle all the options available and provide a cleaner code
+base.
+
+Here is a simple example of using libiproute2 to list network device
+information. The iproute2 code is built on top of Linux Netlink IP service
+protocol - http://www.faqs.org/rfcs/rfc3549.html
+
+#include <stdlib.h>
+#include <stdio.h>
+#include "utils.h"
+#include "iproute.h"
+
+struct rtnl_handle rth;
+
+int main(int argc, char **argv) {
+        preferred_family = AF_PACKET;
+        _SL_ = oneline ? "\\" : "\n" ;
+
+        if (rtnl_open(&rth, 0) < 0)
+                exit(1);
+
+        ipaddr_list_or_flush(0, NULL, 0);
+        rtnl_close(&rth);
+        return 0;
+}
+
+gaumer at debiantosh:(iproute-dev)$ gcc main.c -L./ -liproute2
+gaumer at debiantosh:(iproute-dev)$ ./a.out
+1: lo: <LOOPBACK,UP> mtu 16436 qdisc noqueue master if22052
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+2: eth0: <BROADCAST,MULTICAST> mtu 1500 qdisc noop master if464320 qlen 1000
+    link/ether 00:03:93:b6:2d:7e brd ff:ff:ff:ff:ff:ff
+3: eth1: <BROADCAST,MULTICAST> mtu 1500 qdisc noop master if464320 qlen 1000
+    link/ieee1394 00:03:93:ff:fe:b6:2d:7e brd ff:ff:ff:ff:ff:ff:ff:ff
+4: eth2: <BROADCAST,MULTICAST,UP> mtu 1500 qdisc pfifo_fast master if464320
+qlen 1000
+    link/ether 00:30:65:06:64:56 brd ff:ff:ff:ff:ff:ff
+5: sit0: <NOARP> mtu 1480 qdisc noop master if464320
+    link/sit 0.0.0.0 brd 0.0.0.0
+
+
+This is but a simple example. The library would support all features currently
+supported by iproute2.
+
+--
+Eric Gaumer
+Debian GNU/Linux PPC
+egaumer at pagecache.org
+http://egaumer.pagecache.org
+PGP/GPG Key 0xF15D41E9
+
+From: ervin at kde.org (Kevin Ottens)
+Date: Thu, 5 Jan 2006 17:47:09 +0100
+Subject: [Kde-hardware-devel] Solid Knowledge Base
+In-Reply-To: <f0ff898c0601050631m40f36bdfi@mail.gmail.com>
+References: <273997e40601042124w38384677j@mail.gmail.com>
+	<200601050623.27330.mattchorman@gmail.com>
+	<f0ff898c0601050631m40f36bdfi@mail.gmail.com>
+Message-ID: <200601051747.16007.ervin@kde.org>
+
+Le Jeudi 5 Janvier 2006 15:31, Jean-Remy Falleri a ?crit :
+> Maybe wiki.kde.org should be the right place for this kind of stuff?
+
+Well, I'd like something more focused... I tend to be lost each time I
+approach wiki.kde.org. ;-)
+
+Please be patient, we're in the process to get a wiki, it's just a matter of
+time. I hope to get it going this week-end, or next week.
+
+Regards.
+--
+K?vin 'ervin' Ottens, http://ervin.ipsquad.net
+"Ni le ma?tre sans disciple, Ni le disciple sans ma?tre,
+Ne font reculer l'ignorance."
+
+From: ervin at kde.org (Kevin Ottens)
+Date: Thu, 5 Jan 2006 19:13:07 +0100
+Subject: [Kde-hardware-devel] Core Libraries
+In-Reply-To: <200601050841.23424.egaumer@pagecache.org>
+References: <200601050841.23424.egaumer@pagecache.org>
+Message-ID: <200601051913.13534.ervin@kde.org>
+
+Le Jeudi 5 Janvier 2006 17:41, Eric Gaumer a ?crit :
+> What will be the underlying code that Solid will use to manipulate network
+> hardware?
+
+Currently the primary target is not fixed. The first backend will surely be
+NetworkManager though, my only concern with it is that it's very limited...
+
+> The reason I ask is because I'm currently working on creating a library
+> based on iproute2. This would give applications the ability to perform
+> direct operations on network hardware.
+>
+> My vision is a network daemon that unifies all aspects of network
+> configuration across desktops as well as distributions. This would
+> eliminate things like ifup/ifdown and even replace ip or ifconfig. The
+> daemon would also be able to store network profiles internally across
+> reboots.
+>
+> The actual daemon part comes into play by using the DBUS technology to push
+> network events (i.e., new 802.11 network discovered or cable unplugged,
+> etc...) out to applications that are "network aware".
+>
+> My vision is similar to RedHat's NetworkManager project but goes beyond
+> that by providing a complete replacement for most, if not all, network
+> start-up scripts and providing a uniform mechanism for any Linux desktop to
+> build tools around.
+
+Well, you're basically describing a NetworkManager on steroids. I'm not
+against seeing something like this emerge, but why aren't you sharing with
+them or trying to extend it in the first place?
+
+Please note that I'm asking this to satisfy my curiosity, there's surely a lot
+of reasons to start from scratch, but that would be sad to duplicate efforts
+for the wrong reason. ;-)
+
+Note that such a daemon would surely make my dreams come true (be it
+networkmanager improved or something completely different).
+
+> My motivation is this; network management sucks on Linux. Sure if you like
+> to hack you can always ease the burden but users like mom are completeting
+> left hanging.
+>
+> I was very happy to see this project come along and I definitely think it's
+> a step in the right direction.
+
+Thank you.
+
+> There isn't a whole lot of information given it's infancy so I'm not sure
+> what the API will be built upon.
+
+I don't want to set a choice in stone, hence why the current design has a
+frontend/backend split.
+Since I'm currently focusing on hardware discovery, I provide a HAL backend,
+but it's perfectly feasible to have another backend for a competing solution
+or another platform. The backend just will have to provide the right
+interfaces. Also note that those interfaces are far from decided yet
+regarding network management, I'm clearly open to proposals in this area.
+
+> I'd be interested in getting involved. I can program C/C++ and Python. Most
+> of my work with the QT/KDE API has been with Python. I'd be more interested
+> in the core libraries.
+>
+> Can anyone give some insight as to how the project plans to interact with
+> network hardware and wether or not something like libiproute2.so would be
+> helpful in achieving these goals?
+
+Of course it would surely be helpful. I tend to think that the lib itself
+wouldn't be enough though. A lib+daemon combo like the one you described
+above looks very interesting.
+
+> I have a crude working library just as a proof of concept. The iproute code
+> uses some global variables that I'd need to clean up and I'd probably wrap
+> some of the functions to provide a more consice API. Eventually the ip
+> frontend would simply link to libiproute2 or disappear completely but the
+> option handling is messy as it stands. I'd consider implementing a finite
+> state machine to handle all the options available and provide a cleaner
+> code base.
+
+Just for further references, could you give us the necessary information to
+download the code of your library?
+
+In order to have the whole picture of your work. Do you have any plan for
+dealing with ppp* connections, and VPN?
+
+Regards.
+--
+K?vin 'ervin' Ottens, http://ervin.ipsquad.net
+"Ni le ma?tre sans disciple, Ni le disciple sans ma?tre,
+Ne font reculer l'ignorance."
+
+From: waldo.bastian at intel.com (Bastian, Waldo)
+Date: Thu, 5 Jan 2006 10:33:36 -0800
+Subject: [Kde-hardware-devel] networkstatus
+Message-ID: <8AEB79DC01BE994D8DE3FD02FA5B475B027CF307@orsmsx409>
+
+>Hi Waldo,
+>
+>Le Jeudi 5 Janvier 2006 01:41, Bastian, Waldo a ?crit :
+>> Is the networkstatus module from kdepim/networkstatus to be included as
+>> part of Solid?
+>
+>To be honest I have no clear plan about kdepim/networkstatus, simply
+>because I didn't find time yet to look at it in details.
+>
+>AFAIK, some parts could be reused but IIRC some of them are specific to
+>some PIM needs (please correct me if I'm wrong). If I'm not mistaken, that
+>means that it could partly migrate to kdelibs (where our main library will
+>be) and hopefully the remaining bits will be simpler to implement.
+>
+>As I said for networkstatus my plans are not very clear yet (I'm currently
+>dealing with lower level stuff), but feel free to give me more information
+>or advices, it'll be very valuable IMHO.
+
+I think the PIM needs are for a large part representative of the needs of network oriented applications in general. At the time it was introduced into CVS it was added to kdepim in order to meet release dependencies (kdepim didn't want to rely on the latest kdelibs) but it is my understanding that it can move to kdelibs for KDE 4.0.
+
+Will Stephenson should be able to comment.
+
+Cheers,
+Waldo
+
+From egaumer at pagecache.org  Thu Jan  5 20:22:30 2006
+From: egaumer at pagecache.org (Eric Gaumer)
+Date: Thu, 5 Jan 2006 11:22:30 -0800
+Subject: [Kde-hardware-devel] Core Libraries
+In-Reply-To: <200601051913.13534.ervin@kde.org>
+References: <200601050841.23424.egaumer@pagecache.org>
+	<200601051913.13534.ervin@kde.org>
+Message-ID: <200601051122.30532.egaumer@pagecache.org>
+
+On Thursday 05 January 2006 10:13 am, Kevin Ottens wrote:
+
+> Well, you're basically describing a NetworkManager on steroids. I'm not
+> against seeing something like this emerge, but why aren't you sharing with
+> them or trying to extend it in the first place?
+>
+> Please note that I'm asking this to satisfy my curiosity, there's surely a
+> lot of reasons to start from scratch, but that would be sad to duplicate
+> efforts for the wrong reason. ;-)
+
+NetworkManager seems to be built around libglib2 and I'm not sure how I feel
+about that. It seems more geared toward GNOME APIs though I do realize it's
+completely neutral.
+
+In any event if you look at the backend of NetworkManager you'll see things
+such as:
+
+        /* Add default gateway */
+        buf = g_strdup_printf ("/sbin/ip route add default dev %s", iface);
+        nm_spawn_process (buf);
+        g_free (buf);
+
+So what I propose to do with libiproute2 fills a void that NetworkManager
+doesn't address at this time.
+
+It may very well be the case that I would eventually merge this work with that
+of NetworkManager providing we agreed on the overall goal. If we fail to
+agree then they could very well still use libiproute2 and head in their own
+direction. It wouldn't negate the value of this core work.
+
+The guys working on NetworkManger have more expertise in this area and so I
+would certainly consider any advice they had to offer. I just see something
+bigger than what their current design goal is (though they are similar in
+many ways).
+
+At any rate, I am but one person with limited time to offer so my immediate
+short term goal is to get a library built from iproute that could possibly be
+used in a number of applications.
+
+I'm here on the KDE Hardware list because I've recently moved from Gnome to
+KDE and think that KDE4 is going to be a major breakthrough on the desktop.
+Being that I use KDE, I'm obviously interested in the direction it is
+heading. Though I would like to see my efforts being enjoyed in a homogeneous
+fashion, I would sleep better knowing it would benefit KDE and thus have
+direct benefits on myself.
+
+> Note that such a daemon would surely make my dreams come true (be it
+> networkmanager improved or something completely different).
+
+I think in order to move Linux forward we have to come up with this type of
+solution. It's an ambitious but achievable goal in light of the open source
+community.
+
+> > There isn't a whole lot of information given it's infancy so I'm not sure
+> > what the API will be built upon.
+>
+> I don't want to set a choice in stone, hence why the current design has a
+> frontend/backend split.
+> Since I'm currently focusing on hardware discovery, I provide a HAL
+> backend, but it's perfectly feasible to have another backend for a
+> competing solution or another platform. The backend just will have to
+> provide the right interfaces. Also note that those interfaces are far from
+> decided yet regarding network management, I'm clearly open to proposals in
+> this area.
+
+I've read of a libkdehw but haven't seen any code. Is this anything of
+substance at the moment? Is it meant to address the true core or is it an API
+to provide an interface between KDE and some lower core? Possibly something
+along the lines of libiproute2?
+
+I only ask because if it's a true core than I would switch my focus to helping
+that evolve. I have to imagine that something built from iproute2 code is
+probably as low level as you'll see in user space. Building the library from
+iproute is more of a reorganization of code. All that code is written and
+maintained so my goal is to restructure the build process so that the 'ip'
+frontend gets separated from the actual functions which would be used to
+build a core library that 'ip' would merely link against.
+
+This way those developers who already maintain iproute2 could continue to
+maintain that project and I could shift to something at a higher level like
+the Solid framework.
+
+> > Can anyone give some insight as to how the project plans to interact with
+> > network hardware and wether or not something like libiproute2.so would be
+> > helpful in achieving these goals?
+>
+> Of course it would surely be helpful. I tend to think that the lib itself
+> wouldn't be enough though. A lib+daemon combo like the one you described
+> above looks very interesting.
+
+So it would seem that a library built from iproute would in fact be helpful
+because one consideration has been the use of NetworkManager which would
+obviously benefit from my work.
+
+Wether NetworkManager morphs into something larger or something similar but
+larger comes along, it seems the Solid framework would ultimately benefit.
+
+> > I have a crude working library just as a proof of concept. The iproute
+> > code uses some global variables that I'd need to clean up and I'd
+> > probably wrap some of the functions to provide a more consice API.
+> > Eventually the ip frontend would simply link to libiproute2 or disappear
+> > completely but the option handling is messy as it stands. I'd consider
+> > implementing a finite state machine to handle all the options available
+> > and provide a cleaner code base.
+>
+> Just for further references, could you give us the necessary information to
+> download the code of your library?
+
+Give me a week or so to get the build files written. Everything I've done has
+been by hand up to this point (compiling, linking, etc...). Once I have
+something that you can simply ./configure;make;make install I'll post the
+code online.
+
+As of now I simply build a standalone library but as I stated earlier, I would
+rather restructure things inside of iproute so that it contains the core
+library. I'm not too sure how those developers would feel about that but I
+don't think it would disrupt them too much.
+
+> In order to have the whole picture of your work. Do you have any plan for
+> dealing with ppp* connections, and VPN?
+
+This stuff would sit inside the daemon layer and outside of libiproute2. There
+is also the issue of DHCP which NetworkManager already uses dhcdbd to
+somewhat address. Wether I would merge my ideas into NetworkManager or create
+something entirely new, I would surely benefit from the work being done on
+the NetworkManager project in areas such as this.
+
+The library I speak of has a very direct goal; to provide an interface to the
+functions that iproute2 offers. Anything outside of that would be addressed
+in a lateral component and/or a higher level one.
+
+I don't claim to have a complete solution but rather a general direction of
+where I would like to end up. As things begin to surface and other developers
+join in the work, a more complete and consice design goal would be declared.
+As of now, it's just a embryo of a project living in my mind.
+
+--
+Eric Gaumer
+Debian GNU/Linux PPC
+egaumer at pagecache.org
+http://egaumer.pagecache.org
+PGP/GPG Key 0xF15D41E9
+
+From: michael.larouche at kdemail.net (=?iso-8859-1?q?Micha=EBl_Larouche?=)
+Date: Thu, 05 Jan 2006 20:44:22 -0500
+Subject: [Kde-hardware-devel] Adding "admin" direction as svn:externals ?
+Message-ID: <200601052044.24854.michael.larouche@kdemail.net>
+
+On my local copy on /branches/work/kdehw, I added admin directory to
+"svn:externals" property. This fetch automaticly the admin directory required
+to compile kdehw.
+
+Since kdehw is a independent module will be in branches for a long time, I
+think that's a good thing that we fetch admin directory.
+
+--
+Micha?l Larouche (Shock The Dark Mage)
+KDE developer working on Kopete, Kamefu...on dial-up :P
+--------------------------------------
+Blog: http://mlarouche.blogspot.com/
+MSN/Email: michael.larouche at kdemail.net
+IRC: irc.freenode.org/DarkShock on #kopete,#solid,#kamefu,#plasma
+Jabber: darkshock at myjabber.net
+
+From: ervin at kde.org (Kevin Ottens)
+Date: Fri, 6 Jan 2006 09:34:12 +0100
+Subject: [Kde-hardware-devel] Adding "admin" direction as svn:externals ?
+In-Reply-To: <200601052044.24854.michael.larouche@kdemail.net>
+References: <200601052044.24854.michael.larouche@kdemail.net>
+Message-ID: <200601060934.18569.ervin@kde.org>
+
+Le Vendredi 6 Janvier 2006 02:44, Micha?l Larouche a ?crit :
+> On my local copy on /branches/work/kdehw, I added admin directory to
+> "svn:externals" property. This fetch automaticly the admin directory
+> required to compile kdehw.
+
+Feel free to commit this.
+
+Regards.
+--
+K?vin 'ervin' Ottens, http://ervin.ipsquad.net
+"Ni le ma?tre sans disciple, Ni le disciple sans ma?tre,
+Ne font reculer l'ignorance."
+
+From: wstephenson at kde.org (Will Stephenson)
+Date: Fri, 6 Jan 2006 10:07:05 +0100
+Subject: [Kde-hardware-devel] networkstatus
+In-Reply-To: <8AEB79DC01BE994D8DE3FD02FA5B475B027CF307@orsmsx409>
+References: <8AEB79DC01BE994D8DE3FD02FA5B475B027CF307@orsmsx409>
+Message-ID: <200601061007.05791.wstephenson@kde.org>
+
+Hi Waldo, list.  I'm glad to be a part of the team :).
+
+On Thursday 05 January 2006 19:33, Bastian, Waldo wrote:
+> >Hi Waldo,
+> >
+> >Le Jeudi 5 Janvier 2006 01:41, Bastian, Waldo a ?crit :
+> >> Is the networkstatus module from kdepim/networkstatus to be included as
+> >> part of Solid?
+> >
+> >To be honest I have no clear plan about kdepim/networkstatus, simply
+> >because I didn't find time yet to look at it in details.
+> >
+> >AFAIK, some parts could be reused but IIRC some of them are specific to
+> >some PIM needs (please correct me if I'm wrong). If I'm not mistaken, that
+> >means that it could partly migrate to kdelibs (where our main library will
+> >be) and hopefully the remaining bits will be simpler to implement.
+> >
+> >As I said for networkstatus my plans are not very clear yet (I'm currently
+> >dealing with lower level stuff), but feel free to give me more information
+> >or advices, it'll be very valuable IMHO.
+>
+> I think the PIM needs are for a large part representative of the needs of
+> network oriented applications in general. At the time it was introduced
+> into CVS it was added to kdepim in order to meet release dependencies
+> (kdepim didn't want to rely on the latest kdelibs) but it is my
+> understanding that it can move to kdelibs for KDE 4.0.
+>
+> Will Stephenson should be able to comment.
+
+As Waldo says, it's only in pim for organisational reasons.  The functionality
+is not in any way pim specific.  We can move it to kdelibs when the time is
+right.
+
+To summarise what we have at the moment:
+
+*) networkstatus is a kded module
+*) it is a high level interface to network status information.  This means it
+does not know anything about specific interfaces, wired/wireless, IP details.
+*) it has 2 functions
+*) - interface to find out "Is there a network?".  This works by polling kded
+over DCOP, and via DCOP signals
+*) - interface to asynchronously request a network connection (over DCOP), and
+receive notification when the network is available.
+
+Currently the interface is a bit more powerful than the implementations - we
+envisaged being able to request "Give me a connection to host XYZ" so that if
+a VPN or specific interface is required for that host, it can be started.
+However, we don't have a network infrastructure that can do that yet.
+
+The network provider that supports networkstatus at the moment is SUSE's
+smpppd + kinternet system.
+
+Feel free to ask if any of that is unclear.
+
+From ervin at kde.org  Fri Jan  6 10:33:25 2006
+From: ervin at kde.org (Kevin Ottens)
+Date: Fri, 6 Jan 2006 10:33:25 +0100
+Subject: [Kde-hardware-devel] Core Libraries
+In-Reply-To: <200601051122.30532.egaumer@pagecache.org>
+References: <200601050841.23424.egaumer@pagecache.org>
+	<200601051913.13534.ervin@kde.org>
+	<200601051122.30532.egaumer@pagecache.org>
+Message-ID: <200601061033.36400.ervin@kde.org>
+
+Le Jeudi 5 Janvier 2006 20:22, Eric Gaumer a ?crit :
+> NetworkManager seems to be built around libglib2 and I'm not sure how I
+> feel about that. It seems more geared toward GNOME APIs though I do realize
+> it's completely neutral.
+
+Yes, in particular since on our side it would be accessed via the exposed DBUS
+methods.
+
+> In any event if you look at the backend of NetworkManager you'll see things
+> such as:
+>
+>         /* Add default gateway */
+>         buf = g_strdup_printf ("/sbin/ip route add default dev %s", iface);
+>         nm_spawn_process (buf);
+>         g_free (buf);
+>
+> So what I propose to do with libiproute2 fills a void that NetworkManager
+> doesn't address at this time.
+> [...]
+> At any rate, I am but one person with limited time to offer so my immediate
+> short term goal is to get a library built from iproute that could possibly
+> be used in a number of applications.
+
+Indeed. That's a good reason to have such a project around.
+
+> I'm here on the KDE Hardware list because I've recently moved from Gnome to
+> KDE and think that KDE4 is going to be a major breakthrough on the desktop.
+> Being that I use KDE, I'm obviously interested in the direction it is
+> heading. Though I would like to see my efforts being enjoyed in a
+> homogeneous fashion, I would sleep better knowing it would benefit KDE and
+> thus have direct benefits on myself.
+
+Yes, it would benefit KDE. Solid is higher level, and tries to encapsulate the
+underlying platform. But we build upon this underlying platform, so if it's
+cleaner and more robust it'll make our work easier and we'll be able to
+concentrate more directly on desktop applications needs. The more we cover
+those needs the best future KDE applications will be. That's a "win-win"
+situation IMHO.
+
+> I've read of a libkdehw but haven't seen any code. Is this anything of
+> substance at the moment?
+
+This one will surely number 1 on the wiki. :-)
+Ok, it's currently in the KDE subversion repository : branches/work/kdehw
+Please note that currently it only addresses hardware discovery, there's no
+code for network management yet.
+
+> Is it meant to address the true core or is it an
+> API to provide an interface between KDE and some lower core? Possibly
+> something along the lines of libiproute2?
+
+It's an API to provide an interface between KDE and lower level facilities. So
+possibly will be able to have a backend using libiproute2 directly, but it's
+more likely that we'll communicate with a daemon over DBUS
+
+> I only ask because if it's a true core than I would switch my focus to
+> helping that evolve. I have to imagine that something built from iproute2
+> code is probably as low level as you'll see in user space. Building the
+> library from iproute is more of a reorganization of code. All that code is
+> written and maintained so my goal is to restructure the build process so
+> that the 'ip' frontend gets separated from the actual functions which would
+> be used to build a core library that 'ip' would merely link against.
+>
+> This way those developers who already maintain iproute2 could continue to
+> maintain that project and I could shift to something at a higher level like
+> the Solid framework.
+
+Well, that really depends on your tastes. ;-)
+But yes, Solid is higher level than your current work.
+
+> So it would seem that a library built from iproute would in fact be helpful
+> because one consideration has been the use of NetworkManager which would
+> obviously benefit from my work.
+
+There's no doubt about this IMHO, that library will be helpful. I doubt that
+we'll use it directly from Solid though. From what I know about
+NetworkManager that would be a good move if it uses it.
+
+> Wether NetworkManager morphs into something larger or something similar but
+> larger comes along, it seems the Solid framework would ultimately benefit.
+
+Yes. Through the relevant backends.
+
+> As of now I simply build a standalone library but as I stated earlier, I
+> would rather restructure things inside of iproute so that it contains the
+> core library. I'm not too sure how those developers would feel about that
+> but I don't think it would disrupt them too much.
+
+Did you contact them about your plans? If not it would be wise to do it I
+guess.
+
+> The library I speak of has a very direct goal; to provide an interface to
+> the functions that iproute2 offers. Anything outside of that would be
+> addressed in a lateral component and/or a higher level one.
+
+Which definitely means that your library alone wouldn't be enough for our
+needs. On the other hand, having a daemon like NetworkManager using it is an
+idea that pleases me.
+
+I'm glad to know someone is trying to address this library need, in the end
+it'll result in cleaner code for some tools (NetworkManager looking like a
+natural client for such a work).
+
+Regards.
+--
+K?vin 'ervin' Ottens, http://ervin.ipsquad.net
+"Ni le ma?tre sans disciple, Ni le disciple sans ma?tre,
+Ne font reculer l'ignorance."
+
+From: ervin at kde.org (Kevin Ottens)
+Date: Fri, 6 Jan 2006 10:43:44 +0100
+Subject: [Kde-hardware-devel] networkstatus
+In-Reply-To: <200601061007.05791.wstephenson@kde.org>
+References: <8AEB79DC01BE994D8DE3FD02FA5B475B027CF307@orsmsx409>
+	<200601061007.05791.wstephenson@kde.org>
+Message-ID: <200601061043.44966.ervin@kde.org>
+
+Le Vendredi 6 Janvier 2006 10:07, Will Stephenson a ?crit :
+> Hi Waldo, list.
+
+Hi Will,
+
+> I'm glad to be a part of the team :).
+
+Welcome on board. ;-)
+
+> As Waldo says, it's only in pim for organisational reasons.  The
+> functionality is not in any way pim specific.  We can move it to kdelibs
+> when the time is right.
+
+Ok, I should have been confused by the state machine. It looked oriented on
+syncing features and as such looked a bit PIM oriented to me. Thanks to you
+and Waldo for clarification.
+
+> To summarise what we have at the moment:
+>
+> *) networkstatus is a kded module
+> *) it is a high level interface to network status information.  This means
+> it does not know anything about specific interfaces, wired/wireless, IP
+> details.
+
+Ok, and with Solid that will be our primary goal to provide such information.
+
+> *) it has 2 functions
+> *) - interface to find out "Is there a network?".  This works by polling
+> kded over DCOP, and via DCOP signals
+> *) - interface to asynchronously request a network connection (over DCOP),
+> and receive notification when the network is available.
+>
+> Currently the interface is a bit more powerful than the implementations -
+> we envisaged being able to request "Give me a connection to host XYZ" so
+> that if a VPN or specific interface is required for that host, it can be
+> started. However, we don't have a network infrastructure that can do that
+> yet.
+
+Yes, so let's improve this infrastructure first thanks to Solid and from here
+we'll be able to move networkstatus and make it aware of the extra
+information provided by kdelibs itself.
+It looks like a safe way to do it IMO, in particular since you're on board
+having strong knowledge of networkstatus needs (as you might have noticed
+that's not my case yet). And that's more or less how I plan to proceed with
+the mediamanager.
+Do you agree with this?
+
+Regards.
+--
+K?vin 'ervin' Ottens, http://ervin.ipsquad.net
+"Ni le ma?tre sans disciple, Ni le disciple sans ma?tre,
+Ne font reculer l'ignorance."
+
+From: sanderant at gmail.com (Alexander Antoniades)
+Date: Sat, 7 Jan 2006 21:37:59 -0500
+Subject: [Kde-hardware-devel] KDE (Linux hardware) issues
+Message-ID: <200601072137.59440.sanderant@gmail.com>
+
+Hi all, you asked for input so I thought I'd put in my 0.02$ as requested on
+the announcement. I'd just like to put out a couple of ideas/questions on the
+offhand chance you haven't thought of them (doubtful, but you never know). :)
+
+1) The biggest problem with most of the hardware interaction issues with Linux
+is that projects like HAL Device Manager is that they offer information, but
+no way to rectify the problem. I know that Hal Device Manager was made that
+way by design, but this makes it relatively useless, so the first issue is I
+hope any type of device manager style applications provide a way to actually
+change or rectify hardware problems as opposed to simply stating what the
+system sees.
+From my experience having to deal with that OS that runs on 90% of the worlds
+computers everyday, the main use of a device manager style application is to
+see if the OS sees the right hardware and to sometimes change drivers in the
+case of mis-identification, or drop to a generic driver in the case of a
+driver not working correctly.
+This is my main shortcoming with Linux these days and would go a long way to
+help those of us who try to evangelize and expand Linux's base.
+
+2) What about integration with any existing projects? In particular I was
+thinking about Ubuntu's hardware database and YaST. I know YaST is a whole
+backend, but components like SAX2 are GPL and seem like they would go a long
+way towards making X (which I assume would be a necessary prerequisite to KDE
+on all platforms) easier to manage.
+
+3) One more wish (which isn't done by any OS I know of) would be the ability
+to show all the drivers the currently installed KDE system. This would help
+for in the event of moving the hard drive to another system or switching out
+hardware the ability to anticipate the difficulty of any change or when
+making upgrade decisions.
+
+4) Lastly, for those of us that don't have programming skills, but have access
+to a wide array of hardware I would suggest you plan on releasing live CDs to
+help us assist in any hardware information gathering as I'm sure you'll get
+as much information as you can handle that way.
+
+I realize these are generally pretty obvious, but I wanted to make sure I
+offered them up for you since the project is just starting.
+
+Thank you for addressing this weakness in KDE and I look forward to your
+progress!
+
+Sander
+
+From cblauvelt at gmail.com  Sun Jan  8 20:21:03 2006
+From: cblauvelt at gmail.com (Christopher Blauvelt)
+Date: Sun, 8 Jan 2006 22:21:03 +0300
+Subject: [Kde-hardware-devel] KDE (Linux hardware) issues
+In-Reply-To: <200601072137.59440.sanderant@gmail.com>
+References: <200601072137.59440.sanderant@gmail.com>
+Message-ID: <ffa898c90601081121m1b52d2ecv4f376d8328a33a@mail.gmail.com>
+
+It seems that the first priority of solid should be informational.  The
+device manager that you're describing would be better suited as a "helper
+application."  Or a front end that is capable of accessing the knowledge
+base and downloading and/or compiling drivers as needed.  This would be in
+keeping with the tried and true *nix mantra of do one thing really well.  A
+device manager would be an appropriate application to be released with
+kde4.  It all depends on how ambitious we're willing to be.
+I believe your second point is very valid.  Mostly as a courtesy to the user
+more or less to update that system so it knows what's installed and what
+isn't.  This again would be a priority of the device manager application.
+I don't really understand what you're getting at in your third point.
+Transferring hard drives to another system?
+A live CD needs to be a future goal of the project.  I, however, see a very
+limited use for it.  Most of what the knowledge base is all about is what
+driver combination to use to get a device working "as advertised."  That
+takes trial and error and usually some google'ing.  Most of my time spend
+getting devices to work is not spent coding.  In fact, I don't believe my
+coding knowledge really helps me at all.
+Judging by the pace of previous KDE system development I feel that having
+narrowly focused goals and sticking to them will make the biggest
+contribution to KDE and foster the greatest amount of adoption.
+Well that's what I think.  Feel free to disagree.
+Chris
+
+
+
+On 1/8/06, Alexander Antoniades <sanderant at gmail.com> wrote:
+>
+> Hi all, you asked for input so I thought I'd put in my 0.02$ as requested
+> on
+> the announcement. I'd just like to put out a couple of ideas/questions on
+> the
+> offhand chance you haven't thought of them (doubtful, but you never know).
+> :)
+>
+> 1) The biggest problem with most of the hardware interaction issues with
+> Linux
+> is that projects like HAL Device Manager is that they offer information,
+> but
+> no way to rectify the problem. I know that Hal Device Manager was made
+> that
+> way by design, but this makes it relatively useless, so the first issue is
+> I
+> hope any type of device manager style applications provide a way to
+> actually
+> change or rectify hardware problems as opposed to simply stating what the
+> system sees.
+> From my experience having to deal with that OS that runs on 90% of the
+> worlds
+> computers everyday, the main use of a device manager style application is
+> to
+> see if the OS sees the right hardware and to sometimes change drivers in
+> the
+> case of mis-identification, or drop to a generic driver in the case of a
+> driver not working correctly.
+> This is my main shortcoming with Linux these days and would go a long way
+> to
+> help those of us who try to evangelize and expand Linux's base.
+>
+> 2) What about integration with any existing projects? In particular I was
+> thinking about Ubuntu's hardware database and YaST. I know YaST is a whole
+> backend, but components like SAX2 are GPL and seem like they would go a
+> long
+> way towards making X (which I assume would be a necessary prerequisite to
+> KDE
+> on all platforms) easier to manage.
+>
+> 3) One more wish (which isn't done by any OS I know of) would be the
+> ability
+> to show all the drivers the currently installed KDE system. This would
+> help
+> for in the event of moving the hard drive to another system or switching
+> out
+> hardware the ability to anticipate the difficulty of any change or when
+> making upgrade decisions.
+>
+> 4) Lastly, for those of us that don't have programming skills, but have
+> access
+> to a wide array of hardware I would suggest you plan on releasing live CDs
+> to
+> help us assist in any hardware information gathering as I'm sure you'll
+> get
+> as much information as you can handle that way.
+>
+> I realize these are generally pretty obvious, but I wanted to make sure I
+> offered them up for you since the project is just starting.
+>
+> Thank you for addressing this weakness in KDE and I look forward to your
+> progress!
+>
+> Sander
+> _______________________________________________
+> Kde-hardware-devel mailing list
+> Kde-hardware-devel at kde.org
+> https://mail.kde.org/mailman/listinfo/kde-hardware-devel
+>
+
+From: sanderant at gmail.com (Alexander Antoniades)
+Date: Sun, 8 Jan 2006 17:26:31 -0500
+Subject: [Kde-hardware-devel] KDE (Linux hardware) issues
+In-Reply-To: <ffa898c90601081121m1b52d2ecv4f376d8328a33a@mail.gmail.com>
+References: <200601072137.59440.sanderant@gmail.com>
+	<ffa898c90601081121m1b52d2ecv4f376d8328a33a@mail.gmail.com>
+Message-ID: <8bef8e870601081426r54f21b7bg2bc88811f65ee98e@mail.gmail.com>
+
+Thanks for taking the time to reply
+On 1/8/06, Christopher Blauvelt <cblauvelt at gmail.com> wrote:
+> It seems that the first priority of solid should be informational.  The
+> device manager that you're describing would be better suited as a "helper
+> application."  Or a front end that is capable of accessing the knowledge
+> base and downloading and/or compiling drivers as needed.  This would be in
+> keeping with the tried and true *nix mantra of do one thing really well.  A
+> device manager would be an appropriate application to be released with
+> kde4.  It all depends on how ambitious we're willing to be.
+
+I'm assuming Hardware Browser will be something like HAL Device
+Manager/KInfoCenter, I'm just arguing that it should be able to assist
+in resolving hardware problems. Some help at least in figuring out
+where the driver is coming from would be a start.
+
+My biggest frustration with Linux is the complex nature of its various
+hardware interfaces and how hard it can be to figure out where
+problems are and how to resolve them. From what I've seen, on one
+level, Linux is very much like Windows9x in its structure, I know it's
+much different, in most but bare with me. :)
+
+In both there is a kernel/base level that understands certain
+hardware, and a monolithic GUI that understands other parts and in
+some cases supersedes (or ignores) the settings of the original system
+once it's launched.
+
+Any help that would at least say where the information that any
+hardware browser is getting would go a long way in making it more
+useful. For example I'm typing this from a laptop with a wireless
+PCMCIA card, but KInfoCenter reports "No PCMCIA controller detected"
+obviously it's working, but something along the lines of
+"/etc/pcmcia.conf reports no devices" or "no supported PCMCIA modules
+in current kernel detected" would be much more helpful.
+
+The laundry list of motherboard components and items like "math
+coprocessor" are neat in screenshots, but as a practical matter are
+useless since these devices will never fail independent of the larger
+system and even if they do there little anyone can do to fix them.
+
+> I don't really understand what you're getting at in your third point.
+> Transferring hard drives to another system?
+
+I apologize for being unclear. I was just wondering if there was a way
+to query a kernel to see what modules are available and what hardware
+they would support. This would be useful in scenarios where you have a
+PC with a broken component and want to replace it with another to see
+if a new Kernel is in order or not.
+
+> A live CD needs to be a future goal of the project.  I, however, see a very
+> limited use for it.  Most of what the knowledge base is all about is what
+> driver combination to use to get a device working "as advertised."  That
+> takes trial and error and usually some google'ing.  Most of my time spend
+> getting devices to work is not spent coding.  In fact, I don't believe my
+> coding knowledge really helps me at all.
+
+This is interesting. For me largely Linux hardware either "just works"
+or doesn't. I can hack some simple configs like xorg and such, but
+kernel modules are a mystery to me if they don't work initially I have
+no clue as to how to resolve anything outside of recompiling the
+kernel. I'm curious to see how linux's hardware handling will
+progress.
+
+For example I have an HP Pavillion ze4500, and by default the PCMCIA
+locks up when used. I was fortunate enough to find an awesome webpage
+http://emeitner.f2o.org/nx9005/ by someone much smarter than me who
+figured out it was due to IRQs being misrouted and a change to
+/etc/pcmcia/config.opts would make it work. Outside of this web page I
+don't know how I would have resolved this problem, especially since
+this problem causes the hardware to lock. I'm curious if any
+initiatives like solid would help resolve problems like this.
+
+> Judging by the pace of previous KDE system development I feel that having
+> narrowly focused goals and sticking to them will make the biggest
+> contribution to KDE and foster the greatest amount of adoption.
+> Well that's what I think.  Feel free to disagree.
+
+I agree and KDE's focus on getting things done is why I use it as
+opposed to super ambitious projects that are perpetually in beta. I'm
+sure whatever you come up with will be a step up, and I hope some of
+the distribution vendors help out since this is a clear difficiency
+that keeps me from advocating Linux more.
+
+One other note and that would be to solicit other KDE related projects
+like KSynaptics and (very importantly for me) Lineak.
+
+Thanks,
+
+Sander
+
+From egaumer at pagecache.org  Mon Jan  9 07:35:51 2006
+From: egaumer at pagecache.org (Eric Gaumer)
+Date: Sun, 8 Jan 2006 22:35:51 -0800
+Subject: [Kde-hardware-devel] Core Libraries
+In-Reply-To: <200601051122.30532.egaumer@pagecache.org>
+References: <200601050841.23424.egaumer@pagecache.org>
+	<200601051913.13534.ervin@kde.org>
+	<200601051122.30532.egaumer@pagecache.org>
+Message-ID: <200601082235.51577.egaumer@pagecache.org>
+
+On Thursday 05 January 2006 11:22 am, Eric Gaumer wrote:
+> > Just for further references, could you give us the necessary information
+> > to download the code of your library?
+>
+> Give me a week or so to get the build files written. Everything I've done
+> has been by hand up to this point (compiling, linking, etc...). Once I have
+> something that you can simply ./configure;make;make install I'll post the
+> code online.
+
+I had some time this weekend to get a functional package put together and
+provide a preview of what libiproute2 can offer.
+
+Several small examples are included. Anyone willing to help can gladly email
+me.
+
+http://egaumer.pagecache.org/General/libiproute2-release1.html
+
+--
+Eric Gaumer
+Debian GNU/Linux PPC
+egaumer at pagecache.org
+http://egaumer.pagecache.org
+PGP/GPG Key 0xF15D41E9
+
+From: egaumer at pagecache.org (Eric Gaumer)
+Date: Mon, 9 Jan 2006 08:30:38 -0800
+Subject: [Kde-hardware-devel] KDE (Linux hardware) issues
+In-Reply-To: <8bef8e870601081426r54f21b7bg2bc88811f65ee98e@mail.gmail.com>
+References: <200601072137.59440.sanderant@gmail.com>
+	<ffa898c90601081121m1b52d2ecv4f376d8328a33a@mail.gmail.com>
+	<8bef8e870601081426r54f21b7bg2bc88811f65ee98e@mail.gmail.com>
+Message-ID: <200601090830.38829.egaumer@pagecache.org>
+
+On Sunday 08 January 2006 2:26 pm, Alexander Antoniades wrote:
+> My biggest frustration with Linux is the complex nature of its various
+> hardware interfaces and how hard it can be to figure out where
+> problems are and how to resolve them. From what I've seen, on one
+> level, Linux is very much like Windows9x in its structure, I know it's
+> much different, in most but bare with me. :)
+
+Actually I would say it's quite opposite. It's much easier to locate problems
+on Linux than on Windows.
+
+I understand your point though and to most average users, they see Windows as
+being much easier. The trick is to provide the average user with the same
+abilities that Windows offers to setup and install hardware while still
+retaining the flexible nature of Linux as seen from a developers standpoint.
+
+Windows provides a standard ABI which some have argued should be the case in
+Linux. Linus has stated numerous times that there will never be a kernel ABI
+and so we have to design new ways of dealing with these types of issues. In
+the end, the product is much more stable while admittedly more difficult for
+the average user to work with. We don't want to sacrifice stability for ease
+of use though and that philosophy introduces complexities.
+
+You have to consider that Windows doesn't ship with most drivers. If you buy
+some device it comes with drivers that the manufacturer specifically wrote
+for that device and that operating system.
+
+Linux is a different animal. Some vendors offer drivers but not all are open
+sourced and so they taint things. Linux has the responsibility of writing and
+packaging these drivers directly in the kernel.
+
+On one side of things it makes setting up hardware easier because these
+drivers are native to the operating system. On the other hand it's often hard
+to keep up with all the hardware available these days. This is where
+standards become important.
+
+At any rate, it often appears to be simple task from the standpoint of the
+average user. A "Windows does it so why can't Linux" type of outlook. It's
+important to understand that there is a vast difference in the entire Linux
+model. These problems can be addresses but it's not as easy as simply cloning
+Windows behavior. Better hardware detection and support is going to come in
+greatest volume by vendors complying to standards, understanding there is a
+need, and working with kernel developers to produce quality open source
+drivers.
+
+A bit of a digression but I think this is often a thing that most users don't
+understand.
+
+>
+> Any help that would at least say where the information that any
+> hardware browser is getting would go a long way in making it more
+> useful. For example I'm typing this from a laptop with a wireless
+> PCMCIA card, but KInfoCenter reports "No PCMCIA controller detected"
+> obviously it's working, but something along the lines of
+> "/etc/pcmcia.conf reports no devices" or "no supported PCMCIA modules
+> in current kernel detected" would be much more helpful.
+
+As of 2.6.14 a new pcmcia infrastructure exists that uses the Utopia stack.
+Utopia is providing a uniform model for dealing with hardware and so user
+space applications now have a centralized means of communication with the
+kernel hardware layer. I think the types of problems you described above are
+quickly becoming a thing of the past.
+
+> This is interesting. For me largely Linux hardware either "just works"
+> or doesn't. I can hack some simple configs like xorg and such, but
+> kernel modules are a mystery to me if they don't work initially I have
+> no clue as to how to resolve anything outside of recompiling the
+> kernel. I'm curious to see how linux's hardware handling will
+> progress.
+>
+> For example I have an HP Pavillion ze4500, and by default the PCMCIA
+> locks up when used. I was fortunate enough to find an awesome webpage
+> http://emeitner.f2o.org/nx9005/ by someone much smarter than me who
+> figured out it was due to IRQs being misrouted and a change to
+> /etc/pcmcia/config.opts would make it work. Outside of this web page I
+> don't know how I would have resolved this problem, especially since
+> this problem causes the hardware to lock. I'm curious if any
+> initiatives like solid would help resolve problems like this.
+
+What would you describe as the problem though? The fact that the IRQ conflict
+existed, knowing how to change it, or knowing the conflict existed? On
+Windows if this problem existed it would often show up in the device manager.
+You would still have to search on line for a solution. I assume you would
+like to have Linux somehow notify the user that a problem exists. I think
+that's a reasonable request but it may be a little outside the scope of what
+Solid is about. This would involve the kernel passing this information up to
+the applications. That's an addressable problem but again, I don't think it's
+within the scope of this project.
+
+--
+Eric Gaumer
+Debian GNU/Linux PPC
+egaumer at pagecache.org
+http://egaumer.pagecache.org
+PGP/GPG Key 0xF15D41E9
+
+From: cblauvelt at gmail.com (Christopher Blauvelt)
+Date: Wed, 11 Jan 2006 14:03:31 +0300
+Subject: [Kde-hardware-devel] Using a bitmask for device types
+Message-ID: <ffa898c90601110303u1690bbf5r178366c924c4470@mail.gmail.com>
+
+What would you all think of using a bitmask for device class identification
+rather than using strings.  This would have the advantage of using bit
+comparison (usually about 1-4 cpu cycles or O(1)) rather than using string
+comparison (many cpu cycles per letter or O(x)).  If using an unsigned
+integer this would allow us to have 16 different device classes but more
+importantly have multiple device contexts such as storage and camera in the
+same device.  The code would look something like:
+
+FakeDevice *dev;
+
+    // Initialise a fake system
+    dev = fakeManager->newDevice( "/fake/doeseverything2000" );
+    dev->addCapability(STORAGE_DEVICE | CAMERA_DEVICE | FLYING_MACHINE);
+
+Any thoughts?
+Chris
+
+From: ervin at kde.org (Kevin Ottens)
+Date: Wed, 11 Jan 2006 22:44:49 +0100
+Subject: [Kde-hardware-devel] Using a bitmask for device types
+In-Reply-To: <ffa898c90601110303u1690bbf5r178366c924c4470@mail.gmail.com>
+References: <ffa898c90601110303u1690bbf5r178366c924c4470@mail.gmail.com>
+Message-ID: <200601112244.54797.ervin@kde.org>
+
+Le Mercredi 11 Janvier 2006 12:03, Christopher Blauvelt a ?crit :
+> Any thoughts?
+
+It's in the plan to move away from string based capabilities (you might have
+noticed some "FIXME" in the comments ;-) ).
+
+But from what you wrote it looks like you're proposing to use some
+"#define" (note that I'm guessing here). It would be better to use an enum
+type and an associated QFlags type. This way we'll be able to have the kind
+of notation you introduced, but we'll also be able to make stricter type
+checking.
+
+Regards.
+--
+K?vin 'ervin' Ottens, http://ervin.ipsquad.net
+"Ni le ma?tre sans disciple, Ni le disciple sans ma?tre,
+Ne font reculer l'ignorance."
+
+From: cblauvelt at gmail.com (Christopher Blauvelt)
+Date: Thu, 12 Jan 2006 09:47:02 +0300
+Subject: [Kde-hardware-devel] Using a bitmask for device types
+In-Reply-To: <200601112244.54797.ervin@kde.org>
+References: <ffa898c90601110303u1690bbf5r178366c924c4470@mail.gmail.com>
+	<200601112244.54797.ervin@kde.org>
+Message-ID: <ffa898c90601112247y662475dah827960d38749421f@mail.gmail.com>
+
+Perhaps I should have put KDEHW:: in front of them.  I absolutely agree.  A
+global (to KDEHW) would be fine.  It makes no difference in the code, except
+for KDEHW::.  The only place where things get more hairy is when we get to
+the subcapabilities.  If the device was only one type, a subtype bitmask
+could have different meaning depending on the device.  This breaks down when
+we have a device of more than one type.
+One possible solution is to have a 16 wide array of subtype integers.  A
+device with a bitmask of
+if(this->DEVICE_TYPE & 2<<4)
+{
+    //device options are at this->OPTIONS[4]
+    ...
+}
+One thing we need to decide is, are 16 device types and options enough or
+should we go with 32?
+
+OR . . . .
+
+We could use the bitmask to identify what kind of devices are available and
+have a **Device for arrays of *Devices, or QList<*Device> named things such
+as:
+QList<*Device> storage, camera, flying_machines;
+Each one could then be a separate sub-class that inherits Device.
+
+uint16 deviceDetected(QString dev, QString udi)
+{
+     //. . . determines it's a bluetooth phone with a storage device (for
+pictures) and data functions
+    storage.add( new Storage() );
+    network.add(new BluetoothNetwork() );
+}
+
+
+On 1/12/06, Kevin Ottens <ervin at kde.org> wrote:
+>
+> Le Mercredi 11 Janvier 2006 12:03, Christopher Blauvelt a ?crit :
+> > Any thoughts?
+>
+> It's in the plan to move away from string based capabilities (you might
+> have
+> noticed some "FIXME" in the comments ;-) ).
+>
+> But from what you wrote it looks like you're proposing to use some
+> "#define" (note that I'm guessing here). It would be better to use an enum
+> type and an associated QFlags type. This way we'll be able to have the
+> kind
+> of notation you introduced, but we'll also be able to make stricter type
+> checking.
+>
+> Regards.
+> --
+> K?vin 'ervin' Ottens, http://ervin.ipsquad.net
+> "Ni le ma?tre sans disciple, Ni le disciple sans ma?tre,
+> Ne font reculer l'ignorance."
+>
+>
+> _______________________________________________
+> Kde-hardware-devel mailing list
+> Kde-hardware-devel at kde.org
+> https://mail.kde.org/mailman/listinfo/kde-hardware-devel
+>
+>
+>
+>
+
+From: cblauvelt at gmail.com (Christopher Blauvelt)
+Date: Fri, 13 Jan 2006 11:34:40 +0300
+Subject: [Kde-hardware-devel] Benifits of using HAL
+Message-ID: <ffa898c90601130034i671c93dbl3b96cfe834de51b@mail.gmail.com>
+
+What do we gain by using HAL if we have direct access to DBUS using the
+QDBusConnection class?  It seems like we can do the same things directly
+using DBUS and remove a layer of abstration which should speed things up and
+make our code, and required libraries smaller.
+Chris
+
+From: egaumer at pagecache.org (Eric Gaumer)
+Date: Fri, 13 Jan 2006 06:11:46 -0800
+Subject: [Kde-hardware-devel] Benifits of using HAL
+In-Reply-To: <ffa898c90601130034i671c93dbl3b96cfe834de51b@mail.gmail.com>
+References: <ffa898c90601130034i671c93dbl3b96cfe834de51b@mail.gmail.com>
+Message-ID: <200601130612.01922.egaumer@pagecache.org>
+
+On Friday 13 January 2006 12:34 am, Christopher Blauvelt wrote:
+> What do we gain by using HAL if we have direct access to DBUS using the
+> QDBusConnection class?  It seems like we can do the same things directly
+> using DBUS and remove a layer of abstration which should speed things up
+> and make our code, and required libraries smaller.
+> Chris
+
+DBUS is merely a transport (IPC) framework while HAL detects and stores actual
+device information. HAL uses DBUS to pass device information it finds about
+devices along to applications. DBUS alone cannot detect hardware. The two are
+not competing technologies and operate in different layers of the Utopia
+stack (i.e., udev, DBUS, HAL).
+
+Udev initially creates the device, HAL appends and stores information about
+the device, and DBUS pushes that information out to registered applications.
+
+--
+Eric Gaumer
+Debian GNU/Linux PPC
+egaumer at pagecache.org
+http://egaumer.pagecache.org
+PGP/GPG Key 0xF15D41E9
+
+From: ervin at kde.org (Kevin Ottens)
+Date: Sat, 14 Jan 2006 00:20:48 +0100
+Subject: [Kde-hardware-devel] Solid's wiki is up and running!
+Message-ID: <200601140020.55815.ervin@kde.org>
+
+Hi list,
+
+Since it seems that it was badly needed, a wiki has been installed and is now
+available here: http://solid.kde.org/wiki
+
+There's already some content available as a start, it'll surely grow with
+time. Thanks go to Matt Broadstone for deploying and the wiki design, and to
+Jean-R?my Falleri for giving a hand providing some initial structure.
+
+Let's hope it'll serve its purpose as a central point for developer oriented
+information about Solid. Enjoy!
+
+Of course, some sections still need some love, feel free to create an account
+and improve it. Don't forget to keep us informed, we'll be glad to have news
+from you. =)
+
+Regards.
+--
+K?vin 'ervin' Ottens, http://ervin.ipsquad.net
+"Ni le ma?tre sans disciple, Ni le disciple sans ma?tre,
+Ne font reculer l'ignorance."
+
+From: info at maestroprogramador.com (=?UTF-8?B?UmFmYWVsIEZlcm7DoW5kZXogTMOzcGV6?=)
+Date: Sun, 15 Jan 2006 16:16:29 +0100
+Subject: [Kde-hardware-devel] [Fwd: Hi people !!]
+Message-ID: <43CA674D.70504@maestroprogramador.com>
+
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+Hi all !!
+
+I'm a spanish computer science student. I'm getting introduced into new
+KDE4 code by SVN and I think I can help in some way. I love programming
+(specially C++) but my lack of free time makes it almost impossible.
+I've been developing some apps but they are not finished yet (with QT4)
+- -- they won't help on KDE project --.
+
+I only wanted to introduce myself in this mailing list, and I wish KDE4
+to be the best Window Manager ever seen (better even than now).
+
+Bye,
+Rafael Fern?ndez L?pez.
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+Comment: Using GnuPG with Mozilla - http://enigmail.mozdev.org
+
+iD8DBQFDymdN9RRlaicc3IERAhFDAJ9Wp5F9fkwnyx5Ab4Z3uaAkaGRYJwCghIP6
+Ny6NMa6spHOTnYL3VK5JuMA=
+=ShYK
+-----END PGP SIGNATURE-----

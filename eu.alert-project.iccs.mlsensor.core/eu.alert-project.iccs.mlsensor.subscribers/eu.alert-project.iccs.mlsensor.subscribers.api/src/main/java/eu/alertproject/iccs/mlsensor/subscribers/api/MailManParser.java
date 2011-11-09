@@ -24,25 +24,22 @@ public class MailManParser implements MailParser {
     public void parse(Iterator<String> lines, MailActionVisitor visitor) {
 
         StringBuffer sb = new StringBuffer();
-
         while(lines.hasNext()){
 
             String line = lines.next();
-
             logger.trace("void parse() Handling line {} ",line);
 
             if(StringUtils.equals(line,END_OF_MESSAGE)){
                 visitor.visit(sb.toString());
                 sb = new StringBuffer();
             }else{
-                sb.append(line);
+                sb.append(line+"\n");
             }
-        }
 
+        }
 
         //the last message in the queue
         visitor.visit(sb.toString());
-
 
     }
 }

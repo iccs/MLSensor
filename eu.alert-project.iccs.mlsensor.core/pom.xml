@@ -13,6 +13,7 @@
         <module>eu.alert-project.iccs.mlsensor.conf</module>
         <module>eu.alert-project.iccs.mlsensor.web</module>
         <module>eu.alert-project.iccs.mlsensor.consumer-test</module>
+        <module>eu.alert-project.iccs.mlsensor.run</module>
     </modules>
     <name>ALERT - MLSensor core</name>
     <packaging>pom</packaging>
@@ -296,6 +297,17 @@
                 <version>${org.dbunit.dbunit.version}</version>
             </dependency>
 
+            <dependency>
+                <groupId>javax.mail</groupId>
+                <artifactId>mail</artifactId>
+                <version>1.4.4</version>
+            </dependency>
+
+            <dependency>
+                <groupId>javax.activation</groupId>
+                <artifactId>activation</artifactId>
+                <version>1.1.1</version>
+            </dependency>
 
 
             <!-- Required by @DateTimeFormat validation annotation -->
