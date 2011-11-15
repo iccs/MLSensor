@@ -393,5 +393,18 @@
         </dependency>
 
     </dependencies>
-
+        <repositories>
+        <repository>
+          <id>imu-repository</id>
+          <name>Maven Repository Manager running on repo.mycompany.com</name>
+          <url>http://imu.epd.ece.ntua.gr:9991/artifactory/repos/</url>
+        </repository>
+    </repositories>
+	<pluginRepositories>
+	    <pluginRepository>
+          <id>imu-repository</id>
+          <name>Maven Repository Manager running on repo.mycompany.com</name>
+          <url>http://imu.epd.ece.ntua.gr:9991/artifactory/repos/</url>
+	    </pluginRepository>
+	</pluginRepositories>
 </project>
