@@ -14,6 +14,8 @@
         <module>eu.alert-project.iccs.mlsensor.web</module>
         <module>eu.alert-project.iccs.mlsensor.consumer-test</module>
         <module>eu.alert-project.iccs.mlsensor.run</module>
+        <module>eu.alert-project.iccs.mlsensor.mail</module>
+        <module>eu.alert-project.iccs.mlsensor.test</module>
     </modules>
     <name>ALERT - MLSensor core</name>
     <packaging>pom</packaging>

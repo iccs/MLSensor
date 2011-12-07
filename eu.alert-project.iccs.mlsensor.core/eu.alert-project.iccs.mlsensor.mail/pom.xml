@@ -9,34 +9,26 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>connector</artifactId>
+    <artifactId>mail</artifactId>
+    <name>eu.alert-project.iccs.mlsensor.mail</name>
 
     <dependencies>
-
         <dependency>
-            <groupId>javax.jms</groupId>
-            <artifactId>jms</artifactId>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-core</artifactId>
         </dependency>
         <dependency>
-            <groupId>org.apache.activemq</groupId>
-            <artifactId>activemq-core</artifactId>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context</artifactId>
         </dependency>
-
         <dependency>
-            <groupId>org.apache.activemq</groupId>
-            <artifactId>activemq-pool</artifactId>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context-support</artifactId>
         </dependency>
-
         <dependency>
-            <groupId>org.apache.activemq</groupId>
-            <artifactId>activemq-camel</artifactId>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-beans</artifactId>
         </dependency>
-
-        <dependency>
-            <groupId>commons-io</groupId>
-            <artifactId>commons-io</artifactId>
-        </dependency>
-
         <dependency>
             <groupId>javax.mail</groupId>
             <artifactId>mail</artifactId>
@@ -48,18 +40,17 @@
         </dependency>
 
         <dependency>
-            <groupId>eu.alert-project.iccs.stardom</groupId>
-            <artifactId>connector</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>conf</artifactId>
+            <version>${project.version}</version>
         </dependency>
 
         <dependency>
             <groupId>${project.groupId}</groupId>
+            <artifactId>test</artifactId>
             <version>${project.version}</version>
-            <artifactId>mail</artifactId>
+            <scope>test</scope>
         </dependency>
 
-
     </dependencies>
-
 </project>

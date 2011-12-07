@@ -9,6 +9,7 @@ import eu.alertproject.iccs.mlsensor.connector.producer.MLMessagePublisher;
  */
 public class MLMessagePublisherVisitor  implements MailActionVisitor{
 
+
     private MLMessagePublisher publisher;
 
     public MLMessagePublisherVisitor(MLMessagePublisher publisher){

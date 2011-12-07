@@ -33,8 +33,8 @@ public class MailMessageCreator implements MessageCreator {
 
     public MailMessageCreator(String message){
         this.message = message;
-
     }
+
 
     @Override
     public Message createMessage(Session session) throws JMSException {

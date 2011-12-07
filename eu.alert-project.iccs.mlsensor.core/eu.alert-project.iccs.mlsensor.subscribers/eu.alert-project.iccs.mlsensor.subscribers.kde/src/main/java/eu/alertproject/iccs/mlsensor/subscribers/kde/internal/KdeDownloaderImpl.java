@@ -1,6 +1,7 @@
 package eu.alertproject.iccs.mlsensor.subscribers.kde.internal;
 
 import eu.alertproject.iccs.mlsensor.connector.producer.MLMessagePublisher;
+import eu.alertproject.iccs.mlsensor.connector.producer.MLRealTimeMessagePublisher;
 import eu.alertproject.iccs.mlsensor.subscribers.api.CompoundVisitor;
 import eu.alertproject.iccs.mlsensor.subscribers.api.MLMessagePublisherVisitor;
 import eu.alertproject.iccs.mlsensor.subscribers.api.MailParser;
@@ -14,6 +15,7 @@ import org.apache.commons.lang.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.stereotype.Service;
 
 import java.io.*;
@@ -38,7 +40,13 @@ public class KdeDownloaderImpl implements KdeDownloader {
     private Pattern compile = Pattern.compile("^\\s+<td><A href=\"(.*)\">.*</a></td>");
 
     @Autowired
+    private JavaMailSender mailSender;
+
+    @Autowired
     MailParser mailParser;
+
+    @Autowired
+    MLRealTimeMessagePublisher realTimeMessagePublisher;
 
     @Autowired
     MLMessagePublisher mlMessagePublisher;
@@ -86,6 +94,8 @@ public class KdeDownloaderImpl implements KdeDownloader {
 
     @Override
     public void loadMessages(List<URL> urls) throws IOException {
+
+        realTimeMessagePublisher.setRealTimeEnabled(false);
 
         String tmpDirectory = System.getProperty("java.io.tmpdir");
 
@@ -159,7 +169,8 @@ public class KdeDownloaderImpl implements KdeDownloader {
                             FileUtils.lineIterator(extractedFile),
                             new CompoundVisitor(
                                 new MLMessagePublisherVisitor(mlMessagePublisher),
-                                new SimpleLoggerVisitor()
+                                new SimpleLoggerVisitor(),
+                                new ForwardGoogleVisitor(mailSender)
                             )
                     );
                 } catch (IOException e) {
@@ -178,6 +189,9 @@ public class KdeDownloaderImpl implements KdeDownloader {
             }
 
         }
+
+        realTimeMessagePublisher.setRealTimeEnabled(true);
+
     }
 
 }

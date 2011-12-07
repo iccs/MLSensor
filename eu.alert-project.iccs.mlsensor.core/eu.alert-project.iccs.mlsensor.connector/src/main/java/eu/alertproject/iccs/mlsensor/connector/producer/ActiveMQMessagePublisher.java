@@ -6,9 +6,11 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jms.JmsException;
 import org.springframework.jms.core.JmsTemplate;
+import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 
 import javax.jms.Destination;
+import javax.mail.Message;
 
 
 /**
@@ -26,7 +28,6 @@ public class ActiveMQMessagePublisher implements MLMessagePublisher{
 
 
     private int messageCount = 0;
-
     @Override
     public void sendMessage(String message){
         logger.trace("void sendMessage() {} ",message);
@@ -39,9 +40,6 @@ public class ActiveMQMessagePublisher implements MLMessagePublisher{
             logger.debug("Sending message {} ",messageCount++);
         } catch (JmsException e) {
             logger.warn("Error sending message {} ",message);
-        } finally {
-
-
         }
 
     }
