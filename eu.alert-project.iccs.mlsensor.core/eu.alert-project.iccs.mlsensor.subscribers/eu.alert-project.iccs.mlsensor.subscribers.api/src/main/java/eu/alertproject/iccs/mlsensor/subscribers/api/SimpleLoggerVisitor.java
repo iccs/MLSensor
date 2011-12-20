@@ -12,11 +12,12 @@ public class SimpleLoggerVisitor implements MailActionVisitor{
 
     private Logger logger = LoggerFactory.getLogger(SimpleLoggerVisitor.class);
 
+    private int counter = 0;
 
     @Override
     public void visit(String message) {
 
-        logger.info("void visit() {}",message);
+        logger.info("void visit() {} = {}",counter++,message);
 
     }
 }

@@ -111,6 +111,7 @@ public class KdeDownloaderImpl implements KdeDownloader {
 
 
         for(URL u : urls){
+
             logger.debug("URL = ({})",u.toString());
 
             //download the file
@@ -169,8 +170,7 @@ public class KdeDownloaderImpl implements KdeDownloader {
                             FileUtils.lineIterator(extractedFile),
                             new CompoundVisitor(
                                 new MLMessagePublisherVisitor(mlMessagePublisher),
-                                new SimpleLoggerVisitor(),
-                                new ForwardGoogleVisitor(mailSender)
+                                new SimpleLoggerVisitor()
                             )
                     );
                 } catch (IOException e) {
@@ -186,6 +186,7 @@ public class KdeDownloaderImpl implements KdeDownloader {
                 throw e;
             }finally {
                 IOUtils.closeQuietly(is);
+
             }
 
         }
