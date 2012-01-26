@@ -2,7 +2,10 @@ package eu.alertproject.iccs.mlsensor.connector.producer;
 
 import org.apache.commons.io.IOUtils;
 import org.apache.commons.lang.StringUtils;
+import org.apache.commons.lang.time.DateFormatUtils;
+import org.apache.commons.lang.time.DateUtils;
 import org.codehaus.jackson.io.JsonStringEncoder;
+import org.codehaus.jackson.map.ObjectMapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.jms.core.MessageCreator;
@@ -16,6 +19,7 @@ import javax.jms.TextMessage;
 import javax.mail.MessagingException;
 import javax.mail.internet.MimeMessage;
 import java.io.IOException;
+import java.text.ParseException;
 import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -77,30 +81,42 @@ public class MailMessageCreator implements MessageCreator {
                 //we need to move one ahead because it leaves an empty line
                 scanner.nextLine();
             }else if(sb != null ){
-                sb.append(s+"\n");
+                sb.append(s).append("\n");
             }
 
         }
 
-        String s =
-        //create json string
-        "        {\n" +
-            "            \"profile\":{},\n" +
-            "            \"action\":{\n" +
-            "                \"from\":\""+from+"\",\n" +
-            "                \"date\":\""+when+"\",\n" +
-            "                \"subject\":\""+subject+"\",\n" +
-            "                \"text\":\""+JsonStringEncoder.getInstance().quoteAsString(sb.toString())+"\"\n" +
-            "            }\n" +
-            "        \n" +
-            "        }";
+        MailingListAction ml = new MailingListAction();
+        ObjectMapper mapper = new ObjectMapper();
+
+        try {
+            ml.setFrom(from);
+            ml.setDate(when);
+            ml.setSubject(subject);
+            ml.setText(sb != null ? sb.toString(): "");
+            if(mapper.canSerialize(MailingListAction.class)){
+                String s = mapper.writeValueAsString(ml);
+
+
+                String context = "{" +
+                        "\"profile\":{}," +
+                        "\"action\": "+s+"}";
+
+                logger.trace("Message createMessage() {} ",context);
+                m.setText(context);
+            }
+        } catch (IOException e) {
+            logger.warn("Could create json string");
+//        } catch (ParseException e) {
+//            logger.warn("Could create json string failed to parse date {} ",when);
+        }
 
         logger.trace("---------------- START --------------  " +
                     "Create json string " +
                     "\n\n\n" +
                     "{}" +
-                    "\n\n---------------- END -------------- \n",s);
-        m.setText(s);
+                    "\n\n---------------- END -------------- \n",m.getText());
+
 
         return m;
     }
