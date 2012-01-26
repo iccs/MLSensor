@@ -1,3 +1,6 @@
 MLSensor
 
 This is the Mailing List sensor for the ALERT project
+
+
+Please make sure that you add the required system.properties and mail.properties to the eu.alertproject.iccs.mlsensor.conf project
