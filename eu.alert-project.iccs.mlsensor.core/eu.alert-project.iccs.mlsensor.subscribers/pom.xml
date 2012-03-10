@@ -24,6 +24,13 @@
             <version>${project.parent.version}</version>
             <artifactId>conf</artifactId>
         </dependency>
+
+        <dependency>
+            <groupId>eu.alert-project.iccs.mlsensor</groupId>
+            <version>${project.parent.version}</version>
+            <artifactId>test</artifactId>
+            <scope>test</scope>
+        </dependency>
     </dependencies>
 
 </project>

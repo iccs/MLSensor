@@ -40,9 +40,6 @@ public class KdeDownloaderImpl implements KdeDownloader {
     private Pattern compile = Pattern.compile("^\\s+<td><A href=\"(.*)\">.*</a></td>");
 
     @Autowired
-    private JavaMailSender mailSender;
-
-    @Autowired
     MailParser mailParser;
 
     @Autowired

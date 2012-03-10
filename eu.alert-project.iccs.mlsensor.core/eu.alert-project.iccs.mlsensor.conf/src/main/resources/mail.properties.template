@@ -1,9 +1,0 @@
-# Make a copy of this file to set up your mail sender
-#Mail Messages
-mail.encoding=utf-8
-mail.host=smtp.gmail.com
-mail.username=
-mail.password=
-mail.port=465
-mail.protocol=smtps
-

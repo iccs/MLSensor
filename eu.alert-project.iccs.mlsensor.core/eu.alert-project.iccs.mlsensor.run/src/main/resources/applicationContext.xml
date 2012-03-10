@@ -30,7 +30,6 @@
         <property name="locations">
             <array>
                 <value>classpath:system.properties</value>
-                <value>classpath:mail.properties</value>
             </array>
         </property>
     </bean>
@@ -40,7 +39,6 @@
         <property name="locations">
             <array>
                 <value>classpath:system.properties</value>
-                <value>classpath:mail.properties</value>
             </array>
         </property>
     </bean>

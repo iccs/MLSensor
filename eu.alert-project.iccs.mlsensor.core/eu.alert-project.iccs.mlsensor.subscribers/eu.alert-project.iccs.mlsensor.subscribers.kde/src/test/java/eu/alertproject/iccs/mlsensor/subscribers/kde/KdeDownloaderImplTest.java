@@ -19,7 +19,7 @@ import java.util.List;
  * Time: 20:33
  */
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(locations = {"classpath:testApplicationContext.xml"})
+@ContextConfiguration(locations = {"classpath:kdeTestApplicationContext.xml","classpath:testApplicationContext.xml"})
 public class KdeDownloaderImplTest {
 
     @Autowired

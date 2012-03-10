@@ -27,7 +27,6 @@
             <property name="location" value="classpath:system.properties"/>
     </bean>
 
-
     <!-- ActiveMQ -->
     <bean   id="jmsConnectionFactory"
             class="org.apache.activemq.ActiveMQConnectionFactory" >

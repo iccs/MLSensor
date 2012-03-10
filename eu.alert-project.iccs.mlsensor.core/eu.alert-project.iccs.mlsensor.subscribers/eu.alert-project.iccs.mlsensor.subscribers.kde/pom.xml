@@ -10,6 +10,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>kde</artifactId>
+    <name>${project.groupId}.${project.artifactId}</name>
 
     <dependencies>
 
@@ -29,5 +30,6 @@
             <version>${project.version}</version>
             <artifactId>api</artifactId>
         </dependency>
+
     </dependencies>
 </project>
