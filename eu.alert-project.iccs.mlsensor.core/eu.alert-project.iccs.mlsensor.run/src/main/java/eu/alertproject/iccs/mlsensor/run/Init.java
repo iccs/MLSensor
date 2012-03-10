@@ -24,7 +24,7 @@ public class Init {
     public static void main(String[] args) {
 
         ApplicationContext context = new ClassPathXmlApplicationContext(
-                "applicationContext.xml"
+                "/applicationContext.xml"
         );
 
 

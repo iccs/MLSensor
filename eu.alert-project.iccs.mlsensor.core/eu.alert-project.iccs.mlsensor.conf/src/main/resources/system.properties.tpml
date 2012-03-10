@@ -1,12 +1,19 @@
 subscribers.kde.url=http://mail.kde.org/pipermail/kde-hardware-devel
 
 
+
+mail.host=smtp.gmail.com
+mail.username=user@gmail.com
+mail.password=pass
+mail.port=465
+mail.protocol=smtps
+
 #email properties
 mail.store.protocol=imaps
 mail.encoding=utf-8
 mail.imaps.host = imap.gmail.com
-mail.imaps.username = iccs.stardom@gmail.com
-mail.imaps.password = alertproject
+mail.imaps.username = user@gmail.com
+mail.imaps.password = pass
 mail.imaps.auth= true
 mail.imaps.port= 993
 mail.imaps.socketFactory.port= 993
