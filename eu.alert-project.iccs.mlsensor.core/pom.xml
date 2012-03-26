@@ -16,6 +16,7 @@
         <module>eu.alert-project.iccs.mlsensor.run</module>
         <module>eu.alert-project.iccs.mlsensor.mail</module>
         <module>eu.alert-project.iccs.mlsensor.test</module>
+        <module>eu.alert-project.iccs.mlsensor.assembler</module>
     </modules>
     <name>ALERT - MLSensor core</name>
     <packaging>pom</packaging>
@@ -392,11 +393,6 @@
         <dependency>
             <groupId>org.dbunit</groupId>
             <artifactId>dbunit</artifactId>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>commons-codec</groupId>
-            <artifactId>commons-codec</artifactId>
             <scope>test</scope>
         </dependency>
 
