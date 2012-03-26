@@ -30,7 +30,7 @@ public class ActiveMQMessagePublisher implements MLMessagePublisher{
 
         try {
             template.send(
-                    Topics.IccsMlNewMail,
+                    Topics.ALERT_MLSensor_Mail_New,
                     new MailMessageCreator(message)
             );
             logger.debug("Sending message {} ",messageCount++);
