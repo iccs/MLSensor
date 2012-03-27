@@ -19,5 +19,12 @@
                 <include>*.properties</include>
             </includes>
         </fileSet>
+        <fileSet>
+            <outputDirectory>/etc</outputDirectory>
+            <directory>${basedir}/../${groupId}.run/src/main/conf/</directory>
+            <includes>
+                <include>*.xml</include>
+            </includes>
+        </fileSet>
     </fileSets>
 </assembly>
