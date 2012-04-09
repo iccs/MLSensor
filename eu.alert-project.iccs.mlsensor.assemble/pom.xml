@@ -33,27 +33,6 @@
           </execution>
         </executions>
       </plugin>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-antrun-plugin</artifactId>
-        <version>1.6</version>
-        <!--<executions>-->
-        <!--<execution>-->
-        <!--<id>rename</id>-->
-        <!--<phase>package</phase>-->
-        <!--<goals>-->
-        <!--<goal>run</goal>-->
-        <!--</goals>-->
-        <!--</execution>-->
-        <!--</executions>-->
-        <configuration>
-          <target name="rename-to-zip">
-            <move
-                file="${project.build.directory}/${project.artifactId}-${project.version}-all/assemble-${project.version}-all.zip"
-                toFile="${project.build.directory}/${project.artifactId}-${project.version}-all/mlsenso-sources-${project.version}.zip"/>
-          </target>
-        </configuration>
-      </plugin>
     </plugins>
   </build>
 

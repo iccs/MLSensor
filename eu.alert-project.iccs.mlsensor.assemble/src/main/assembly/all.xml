@@ -11,7 +11,20 @@
     <fileSets>
         <fileSet>
             <directory>${basedir}/../eu.alert-project.iccs.mlsensor.core</directory>
-            <outputDirectory>/</outputDirectory>
+            <outputDirectory>/eu.alert-project.iccs.mlsensor.core</outputDirectory>
+            <excludes>
+                <exclude>**/*.iml</exclude>
+                <exclude>**/target/**</exclude>
+                <exclude>**/bin/**</exclude>
+                <exclude>**/.settings/**</exclude>
+                <exclude>**/.classpath</exclude>
+                <exclude>**/.project</exclude>
+                <exclude>**/system.properties</exclude>
+            </excludes>
+        </fileSet>
+        <fileSet>
+            <directory>${basedir}/../../eu.alert-project.iccs.events</directory>
+            <outputDirectory>/eu.alert-project.iccs.events</outputDirectory>
             <excludes>
                 <exclude>**/*.iml</exclude>
                 <exclude>**/target/**</exclude>
@@ -21,18 +34,6 @@
                 <exclude>**/.project</exclude>
             </excludes>
         </fileSet>
-        <!--<fileSet>-->
-            <!--<directory>${basedir}/../../eu.alert-project.iccs.events.core</directory>-->
-            <!--<excludes>-->
-              <!--<excludes>-->
-                <!--<exclude>**/*.iml</exclude>-->
-                <!--<exclude>**/target/**</exclude>-->
-                <!--<exclude>**/bin/**</exclude>-->
-                <!--<exclude>**/.settings/**</exclude>-->
-                <!--<exclude>**/.classpath</exclude>-->
-                <!--<exclude>**/.project</exclude>-->
-              <!--</excludes>-->
-            <!--</excludes>-->
-        <!--</fileSet>-->
+
     </fileSets>
 </assembly>
