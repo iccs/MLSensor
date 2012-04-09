@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <parent>
+    <artifactId>core</artifactId>
+    <groupId>eu.alert-project.iccs.mlsensor</groupId>
+    <version>0.0.1-SNAPSHOT</version>
+  </parent>
+  <packaging>pom</packaging>
+  <modelVersion>4.0.0</modelVersion>
+  <artifactId>assemble</artifactId>
+  <name>${project.groupId}.${project.artifactId}</name>
+
+  <build>
+    <plugins>
+      <plugin>
+        <artifactId>maven-assembly-plugin</artifactId>
+        <version>2.2</version>
+        <executions>
+          <execution>
+            <id>build-all</id>
+            <goals>
+              <goal>single</goal>
+            </goals>
+            <phase>package</phase>
+            <configuration>
+              <descriptors>
+                <descriptor>src/main/assembly/all.xml</descriptor>
+              </descriptors>
+              <finalName>mlsensor-${project.version}</finalName>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-antrun-plugin</artifactId>
+        <version>1.6</version>
+        <!--<executions>-->
+        <!--<execution>-->
+        <!--<id>rename</id>-->
+        <!--<phase>package</phase>-->
+        <!--<goals>-->
+        <!--<goal>run</goal>-->
+        <!--</goals>-->
+        <!--</execution>-->
+        <!--</executions>-->
+        <configuration>
+          <target name="rename-to-zip">
+            <move
+                file="${project.build.directory}/${project.artifactId}-${project.version}-all/assemble-${project.version}-all.zip"
+                toFile="${project.build.directory}/${project.artifactId}-${project.version}-all/mlsenso-sources-${project.version}.zip"/>
+          </target>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+
+  <dependencies>
+    <dependency>
+      <groupId>${project.groupId}</groupId>
+      <version>${project.version}</version>
+      <artifactId>run</artifactId>
+    </dependency>
+  </dependencies>
+
+</project>
