@@ -53,7 +53,7 @@ public class ActiveMQRealTimeMessagePublisher implements MLRealTimeMessagePublis
 
                     try {
                         template.send(
-                                Topics.IccsMlNewMail,
+                                Topics.ALERT_MLSensor_Mail_New,
                                 new JavaxMailMessageCreator(m)
                         );
                         messageCount++;
