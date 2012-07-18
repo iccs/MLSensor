@@ -11,11 +11,11 @@
     <packaging>pom</packaging>
     <modules>
         <module>eu.alert-project.iccs.mlsensor.subscribers.api</module>
-        <module>eu.alert-project.iccs.mlsensor.subscribers.kde</module>
+        <module>eu.alert-project.iccs.mlsensor.subscribers.mailman</module>
     </modules>
     <groupId>eu.alert-project.iccs.mlsensor.subscribers</groupId>
     <artifactId>subscribers</artifactId>
-
+    <name>${project.groupId}.${project.artifactId}</name>
 
     <dependencies>
 
@@ -23,6 +23,12 @@
             <groupId>eu.alert-project.iccs.mlsensor</groupId>
             <version>${project.parent.version}</version>
             <artifactId>conf</artifactId>
+        </dependency>
+
+        <dependency>
+          <groupId>eu.alert-project.iccs.mlsensor</groupId>
+          <version>${project.version}</version>
+          <artifactId>parsers</artifactId>
         </dependency>
 
         <dependency>

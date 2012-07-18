@@ -1,16 +1,14 @@
 package eu.alertproject.iccs.mlsensor.run;
 
-import eu.alertproject.iccs.mlsensor.subscribers.kde.api.KdeDownloader;
+import eu.alertproject.iccs.mlsensor.subscribers.mailman.api.MailDownloader;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
-import org.springframework.stereotype.Component;
 
-import javax.annotation.PostConstruct;
 import java.net.URL;
 import java.util.List;
+import java.util.Properties;
 
 /**
  * User: fotis
@@ -24,17 +22,17 @@ public class Init {
     public static void main(String[] args) {
 
         ApplicationContext context = new ClassPathXmlApplicationContext(
-                "/applicationContext.xml"
+                "/ml-sensor/applicationContext.xml"
         );
 
 
-        KdeDownloader kdeDownloader = (KdeDownloader) context.getBean("kdeDownloader");
-
+        Properties systemProperties = (Properties) context.getBean("systemProperties");
+        MailDownloader mailDownloader = (MailDownloader) context.getBean("mailDownloader");
+        String url =systemProperties.getProperty("subscribers.mailman.url");
         logger.info("init() Initializing ");
-        String url = "http://mail.kde.org/pipermail/kde-hardware-devel";
         try {
-            List<URL> urls = kdeDownloader.fetchUrls(url);
-            kdeDownloader.loadMessages(urls);
+            List<URL> urls = mailDownloader.fetchUrls(url);
+            mailDownloader.loadMessages(urls);
 
         } catch (Exception e) {
             logger.error("Couldn't load url {}", url, e);

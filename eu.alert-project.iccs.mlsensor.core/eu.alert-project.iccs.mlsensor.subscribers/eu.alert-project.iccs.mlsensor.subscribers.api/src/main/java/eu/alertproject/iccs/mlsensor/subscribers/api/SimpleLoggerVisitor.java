@@ -1,5 +1,6 @@
 package eu.alertproject.iccs.mlsensor.subscribers.api;
 
+import eu.alertproject.iccs.mlsensor.parsers.MailActionVisitor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -8,7 +9,7 @@ import org.slf4j.LoggerFactory;
  * Date: 02/11/11
  * Time: 22:33
  */
-public class SimpleLoggerVisitor implements MailActionVisitor{
+public class SimpleLoggerVisitor implements MailActionVisitor {
 
     private Logger logger = LoggerFactory.getLogger(SimpleLoggerVisitor.class);
 

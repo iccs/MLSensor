@@ -1,6 +1,7 @@
 package eu.alertproject.iccs.mlsensor.mail;
 
 import eu.alertproject.iccs.mlsensor.mail.api.MailService;
+import eu.alertproject.iccs.mlsensor.mail.api.MailServiceVisitor;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -8,6 +9,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.mail.SimpleMailMessage;
+import org.springframework.mail.javamail.MimeMailMessage;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
@@ -35,18 +37,14 @@ public class GMailImapsMailService{
     public void testRead(){
 
         //send a coumple of e-mail to gmail account
-        try {
-            List<SimpleMailMessage> unreadMessages = mailService.getUnreadMessages();
+        List<Message> unreadMessages = mailService.getUnreadMessages(new MailServiceVisitor() {
+            @Override
+            public boolean handle(Message message) {
+                return true;
+            }
+        });
 
-            Assert.assertEquals(unreadMessages.size(), 2, 0);
-
-        } catch (MessagingException e) {
-            e.printStackTrace();
-            Assert.fail();
-        } catch (IOException e) {
-            e.printStackTrace();
-            Assert.fail();
-        }
+        Assert.assertEquals(unreadMessages.size(), 2, 0);
 
     }
 

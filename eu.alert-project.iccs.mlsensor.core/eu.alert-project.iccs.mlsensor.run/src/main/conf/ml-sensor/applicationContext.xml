@@ -3,11 +3,11 @@
         xmlns="http://www.springframework.org/schema/beans"
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xmlns:context="http://www.springframework.org/schema/context"
-        xmlns:tx="http://www.springframework.org/schema/tx"
+
+        xmlns:tx="http://www.springframework.org/schema/tx" xmlns:task="http://www.springframework.org/schema/task"
         xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
 	    http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
-	    http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.0.xsd
-	    "
+	    http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.0.xsd http://www.springframework.org/schema/task http://www.springframework.org/schema/task/spring-task-3.0.xsd"
         default-autowire="byName"
         >
 
@@ -19,13 +19,31 @@
         separately -->
     <context:component-scan base-package="eu.alertproject.iccs.mlsensor" />
 
+
+    <task:scheduler id="taskScheduler"/>
+    <task:executor id="taskExecutor" pool-size="1"/>
+
+    <task:annotation-driven executor="taskExecutor" scheduler="taskScheduler"/>
+
+
     <bean id="alertPropertyConfigurer" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer" >
-            <property name="location" value="classpath:system.properties"/>
+        <property name="locations">
+            <array>
+                <value>classpath:system.properties</value>
+            </array>
+        </property>
     </bean>
 
+
     <bean id="systemProperties" class="org.springframework.beans.factory.config.PropertiesFactoryBean" >
-            <property name="location" value="classpath:system.properties"/>
+        <property name="locations">
+            <array>
+                <value>classpath:system.properties</value>
+            </array>
+        </property>
     </bean>
+
+
 
     <!-- ActiveMQ -->
     <bean   id="jmsConnectionFactory"
@@ -59,9 +77,11 @@
         <property name="pubSubDomain" value="true"/>
     </bean>
 
-  <bean id="mailService" class="${mail.service}"/>
-  <bean id="mailParsers" class="${mailParser}"/>
+    <bean id="mailService" class="${mail.service}"/>
+    <bean id="mailParsers" class="${mailParser}"/>
 
-  <bean id="mailDownloader" class="${subscribers.mailman.downloader}"/>
+
+    <bean id="realTimeMessagePublisher" class="${realTime.publisher}"/>
+    <bean id="mailDownloader" class="${subscribers.mailman.downloader}"/>
 
 </beans>

@@ -11,12 +11,12 @@
         <module>eu.alert-project.iccs.mlsensor.connector</module>
         <module>eu.alert-project.iccs.mlsensor.subscribers</module>
         <module>eu.alert-project.iccs.mlsensor.conf</module>
-        <module>eu.alert-project.iccs.mlsensor.web</module>
         <module>eu.alert-project.iccs.mlsensor.consumer-test</module>
-        <module>eu.alert-project.iccs.mlsensor.run</module>
         <module>eu.alert-project.iccs.mlsensor.mail</module>
         <module>eu.alert-project.iccs.mlsensor.test</module>
         <module>eu.alert-project.iccs.mlsensor.assembler</module>
+        <module>eu.alert-project.iccs.mlsensor.parsers</module>
+        <module>eu.alert-project.iccs.mlsensor.run</module>
     </modules>
     <name>ALERT - MLSensor core</name>
     <packaging>pom</packaging>
