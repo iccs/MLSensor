@@ -3,6 +3,7 @@ package eu.alertproject.iccs.mlsensor.connector.producer;
 import eu.alertproject.iccs.events.alert.MailingList;
 import eu.alertproject.iccs.events.api.EventFactory;
 import eu.alertproject.iccs.events.api.Topics;
+import eu.alertproject.iccs.mlsensor.connector.services.ForumUrlExtractionService;
 import eu.alertproject.iccs.mlsensor.mail.api.MailService;
 import eu.alertproject.iccs.mlsensor.mail.api.MailServiceVisitor;
 import org.slf4j.Logger;
@@ -36,24 +37,12 @@ public class ActiveMQRTNableMessagePublisher extends AbstractMLRealTimeMessagePu
     private JmsTemplate template;
 
     @Autowired
-    private Properties systemProperties;
+    private ForumUrlExtractionService forumUrlExtractionService;
 
     @Autowired
     MailService mailService;
 
     private int messageCount =0;
-    private Pattern p;
-
-    @PostConstruct
-    public void init() {
-
-        String property = systemProperties.getProperty("realTime.nable.url");
-        property = property.replaceAll("\\.","\\\\.");
-
-        p = Pattern.compile("^"+property +".*$",Pattern.MULTILINE);
-
-    }
-
 
 
     @Override
@@ -89,14 +78,8 @@ public class ActiveMQRTNableMessagePublisher extends AbstractMLRealTimeMessagePu
                                     mailingList.setReference(references);
 
 
-
                                     //extract forum from
-                                    Matcher matcher = p.matcher(content);
-                                    if(matcher.find()){
-                                        String forumUrl = matcher.group(0);
-                                        logger.trace("TextMessage handle() Found forum url {} ",forumUrl);
-                                        mailingList.setUrl(forumUrl);
-                                    }
+                                    mailingList.setUrl(forumUrlExtractionService.extractUrl(content));
 
                                     String mlSensorMailNewEvent = EventFactory.createMlSensorForumNewEvent(
                                             id,

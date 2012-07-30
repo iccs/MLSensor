@@ -84,4 +84,7 @@
     <bean id="realTimeMessagePublisher" class="${realTime.publisher}"/>
     <bean id="mailDownloader" class="${subscribers.mailman.downloader}"/>
 
+    <bean id="forumUrlExtractionService" class="eu.alertproject.iccs.mlsensor.connector.services.NableForumUrlExtractionService">
+        <constructor-arg value="${realTime.nable.url}"/>
+    </bean>
 </beans>

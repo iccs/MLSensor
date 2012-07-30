@@ -1,0 +1,16 @@
+Hi,
+
+Yes, you could fork a previous version.
+But IMO, it would be more simple to develop your own binding component.
+
+Besides, the SOAP connector is quite big.
+You may prefer start from a lighter connector and replace its logic by your own mapping between JSON and XML. Here is a suggestion of a not-so-old connector.
+
+Instead of listening to HL7 (which are HTTP) connections, start a Jetty server and convert the received requests in Petals messages. That will be more simple than starting from the SOAP connector which has a Jetty but also Axis2...
+« Petals M.D. »
+
+
+If you reply to this email, your message will be added to the discussion below:
+http://forum.petalslink.com/bc-soap-4-1-consume-mode-JSON-tp3988255p4025049.html
+To unsubscribe from Petals Forums, click here.
+NAML
