@@ -73,5 +73,10 @@
             <version>${project.version}</version>
             <artifactId>mailman</artifactId>
         </dependency>
+        <dependency>
+            <groupId>eu.alert-project.iccs.mlsensor.subscribers</groupId>
+            <version>${project.version}</version>
+            <artifactId>nabble</artifactId>
+        </dependency>
     </dependencies>
 </project>

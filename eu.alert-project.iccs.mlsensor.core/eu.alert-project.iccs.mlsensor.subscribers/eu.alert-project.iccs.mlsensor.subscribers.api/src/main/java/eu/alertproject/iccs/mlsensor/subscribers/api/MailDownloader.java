@@ -1,4 +1,4 @@
-package eu.alertproject.iccs.mlsensor.subscribers.mailman.api;
+package eu.alertproject.iccs.mlsensor.subscribers.api;
 
 import java.io.IOException;
 import java.net.URL;

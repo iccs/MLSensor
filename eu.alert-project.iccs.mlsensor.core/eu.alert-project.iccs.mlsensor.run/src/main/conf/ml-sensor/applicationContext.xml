@@ -87,4 +87,10 @@
     <bean id="forumUrlExtractionService" class="eu.alertproject.iccs.mlsensor.connector.services.NableForumUrlExtractionService">
         <constructor-arg value="${realTime.nable.url}"/>
     </bean>
+
+    <bean id="runner" class="${runner}"/>
+
+
+    <bean id="xmlToMailingListService" class="${runner.nable.xmlservice}"/>
+
 </beans>

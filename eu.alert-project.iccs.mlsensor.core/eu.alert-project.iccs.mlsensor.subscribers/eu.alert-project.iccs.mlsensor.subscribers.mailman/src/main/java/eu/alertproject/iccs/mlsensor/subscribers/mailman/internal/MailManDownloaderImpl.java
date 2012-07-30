@@ -6,7 +6,7 @@ import eu.alertproject.iccs.mlsensor.parsers.CompoundVisitor;
 import eu.alertproject.iccs.mlsensor.parsers.MailParser;
 import eu.alertproject.iccs.mlsensor.subscribers.api.MLMessagePublisherVisitor;
 import eu.alertproject.iccs.mlsensor.subscribers.api.SimpleLoggerVisitor;
-import eu.alertproject.iccs.mlsensor.subscribers.mailman.api.MailDownloader;
+import eu.alertproject.iccs.mlsensor.subscribers.api.MailDownloader;
 import org.apache.commons.codec.digest.DigestUtils;
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.IOUtils;

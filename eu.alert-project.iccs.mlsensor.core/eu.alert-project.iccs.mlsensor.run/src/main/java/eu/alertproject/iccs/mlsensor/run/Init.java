@@ -1,6 +1,7 @@
 package eu.alertproject.iccs.mlsensor.run;
 
-import eu.alertproject.iccs.mlsensor.subscribers.mailman.api.MailDownloader;
+import eu.alertproject.iccs.mlsensor.subscribers.api.MailDownloader;
+import eu.alertproject.iccs.mlsensor.subscribers.api.Runner;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.context.ApplicationContext;
@@ -27,16 +28,9 @@ public class Init {
 
 
         Properties systemProperties = (Properties) context.getBean("systemProperties");
-        MailDownloader mailDownloader = (MailDownloader) context.getBean("mailDownloader");
-        String url =systemProperties.getProperty("subscribers.mailman.url");
+        Runner runner = (Runner) context.getBean("runner");
         logger.info("init() Initializing ");
-        try {
-            List<URL> urls = mailDownloader.fetchUrls(url);
-            mailDownloader.loadMessages(urls);
-
-        } catch (Exception e) {
-            logger.error("Couldn't load url {}", url, e);
-        }
+        runner.run(systemProperties);
 
     }
 

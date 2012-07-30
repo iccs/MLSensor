@@ -1,0 +1,15 @@
+petals_ez,
+
+Can you copy/paste or upload the test errors that you have while you are trying to compile PetalsBPM please ? It would be nice to do it in debug mode ('mvn install -X') so that we can have informations on your OS, java version etc ... Also consider doing a svn up on the sources you checked out.
+
+I can see in you screenshot that some of the projects are Maven Projects (GeasyTools and Webeditor) and the others are just Java projects (that are the result of mvn eclipse:eclipse I assume ...).
+
+I think that you should try to delete the eclipse projects generated with 'mvn eclipse:eclipse' with a 'mvn eclipse:clean' and then import those projects directly into eclipse as maven projects ...
+
+You should not have to edit petalsbpmn-client or petalsbpmn-client-demo projects if you imported them as maven projects, the dependencies/classpath should automatically be resolved
+
+Long story short, after you checked out geastytools, geasywebeditor and petalsbpm should import each projects as 'Maven existing projects', you should end up with something like the following screenshot and you should not have to edit anything else, otherwise we just did something wrong :) ...
+
+<nabble_img src="allProjectsEclipseMaven.png" border="0"/>
+
+Just notice that there is no "GeasyTools" or "GeasyWebeditor" project. The errors in "governance" project should not be a problem

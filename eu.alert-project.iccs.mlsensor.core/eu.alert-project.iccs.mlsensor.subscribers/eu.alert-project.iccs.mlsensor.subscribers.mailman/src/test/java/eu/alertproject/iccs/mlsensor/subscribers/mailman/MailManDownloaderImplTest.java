@@ -1,6 +1,6 @@
 package eu.alertproject.iccs.mlsensor.subscribers.mailman;
 
-import eu.alertproject.iccs.mlsensor.subscribers.mailman.api.MailDownloader;
+import eu.alertproject.iccs.mlsensor.subscribers.api.MailDownloader;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;

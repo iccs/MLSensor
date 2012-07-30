@@ -12,6 +12,7 @@
     <modules>
         <module>eu.alert-project.iccs.mlsensor.subscribers.api</module>
         <module>eu.alert-project.iccs.mlsensor.subscribers.mailman</module>
+        <module>eu.alert-project.iccs.mlsensor.subscribers.nabble</module>
     </modules>
     <groupId>eu.alert-project.iccs.mlsensor.subscribers</groupId>
     <artifactId>subscribers</artifactId>
