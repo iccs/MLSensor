@@ -48,9 +48,9 @@
     <!-- ActiveMQ -->
     <bean   id="jmsConnectionFactory"
             class="org.apache.activemq.ActiveMQConnectionFactory" >
-        <property name="brokerURL" value="tcp://localhost:61616" />
-        <property name="userName" value="admin" />
-        <property name="password" value="password" />
+        <property name="brokerURL" value="${activemq.url}" />
+        <property name="userName" value="${activemq.userName}" />
+        <property name="password" value="${activemq.password}" />
     </bean>
 
     <bean id="pooledJmsConnectionFactory"

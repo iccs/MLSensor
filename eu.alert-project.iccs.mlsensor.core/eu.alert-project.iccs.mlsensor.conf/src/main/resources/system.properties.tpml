@@ -1,23 +1,65 @@
-subscribers.kde.url=http://mail.kde.org/pipermail/kde-hardware-devel
+##########################################################
+#               ActiveMQ
+##########################################################
+
+activemq.url=tcp://localhost:61616
+activemq.userName=
+activemq.password=
+
+############################################################################
+#                        Parsers
+############################################################################
+
+
+########################## Mail Man #######################################
+mailParser=eu.alertproject.iccs.mlsensor.parsers.MailManParser
+
+
+############################################################################
+############################################################################
+
+subscribers.mailman.downloader=eu.alertproject.iccs.mlsensor.subscribers.mailman.internal.MailManDownloaderImpl
+subscribers.mailman.url=http://mail.kde.org/pipermail/kde-hardware-devel
+#subscribers.mailman.url=optimis
 
 
 
-mail.host=smtp.gmail.com
-mail.username=user@gmail.com
-mail.password=pass
-mail.port=465
-mail.protocol=smtps
 
-#email properties
+############################################################################
+#                        Real Time
+############################################################################
+
+
+#realTime.publisher=eu.alertproject.iccs.mlsensor.connector.producer.ActiveMQRealTimeMessagePublisher
+
+
+realTime.publisher=eu.alertproject.iccs.mlsensor.connector.producer.ActiveMQRTNableMessagePublisher
+realTime.nable.url=http://forum.petalslink.com
+
+
+############################################################################
+
+
+
+
+########################## E-Mail Service #######################################
+mail.service=eu.alertproject.iccs.mlsensor.mail.internal.GMailImapsMailService
+
 mail.store.protocol=imaps
 mail.encoding=utf-8
 mail.imaps.host = imap.gmail.com
-mail.imaps.username = user@gmail.com
-mail.imaps.password = pass
-mail.imaps.auth= true
-mail.imaps.port= 993
-mail.imaps.socketFactory.port= 993
-mail.imaps.socketFactory.class= javax.net.ssl.SSLSocketFactory
-mail.imaps.socketFactory.fallback = false
-mail.imaps.quitwait = false
+mail.imaps.username = email@gmail.com
+mail.imaps.password = 1234
 mail.imaps.folder=INBOX
+
+
+############################################################################
+
+# Make a copy of this file to set up your mail sender
+#Mail Messages
+mail.host=smtp.gmail.com
+mail.username=email@gmail.com
+mail.password=1234
+mail.port=465
+mail.protocol=smtps
+

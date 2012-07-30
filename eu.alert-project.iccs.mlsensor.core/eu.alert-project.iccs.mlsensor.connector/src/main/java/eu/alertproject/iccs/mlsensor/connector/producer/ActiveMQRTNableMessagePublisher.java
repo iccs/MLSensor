@@ -5,7 +5,6 @@ import eu.alertproject.iccs.events.api.EventFactory;
 import eu.alertproject.iccs.events.api.Topics;
 import eu.alertproject.iccs.mlsensor.mail.api.MailService;
 import eu.alertproject.iccs.mlsensor.mail.api.MailServiceVisitor;
-import org.apache.commons.lang.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,9 +28,9 @@ import java.util.regex.Pattern;
  * Date: 18/07/12
  * Time: 08:11
  */
-public class ActiveMQRTForumMessagePublisher extends AbstractMLRealTimeMessagePublisher{
+public class ActiveMQRTNableMessagePublisher extends AbstractMLRealTimeMessagePublisher{
 
-    private Logger logger = LoggerFactory.getLogger(ActiveMQRTForumMessagePublisher.class);
+    private Logger logger = LoggerFactory.getLogger(ActiveMQRTNableMessagePublisher.class);
 
     @Autowired
     private JmsTemplate template;
@@ -43,13 +42,12 @@ public class ActiveMQRTForumMessagePublisher extends AbstractMLRealTimeMessagePu
     MailService mailService;
 
     private int messageCount =0;
-    private String forumUrl;
     private Pattern p;
 
     @PostConstruct
     public void init() {
 
-        String property = systemProperties.getProperty("realTime.forum.url");
+        String property = systemProperties.getProperty("realTime.nable.url");
         property = property.replaceAll("\\.","\\\\.");
 
         p = Pattern.compile("^"+property +".*$",Pattern.MULTILINE);

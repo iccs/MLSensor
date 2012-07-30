@@ -16,15 +16,22 @@
             <outputDirectory>/etc</outputDirectory>
             <directory>${basedir}/../${groupId}.conf/src/main/resources/</directory>
             <includes>
-                <include>*.properties</include>
+                <include>log4j.properties</include>
             </includes>
         </fileSet>
         <fileSet>
-            <outputDirectory>/etc</outputDirectory>
-            <directory>${basedir}/../${groupId}.run/src/main/conf/</directory>
+            <outputDirectory>/etc/ml-sensor</outputDirectory>
+            <directory>${basedir}/../${groupId}.run/src/main/conf/ml-sensor</directory>
             <includes>
                 <include>*.xml</include>
             </includes>
         </fileSet>
     </fileSets>
+    <files>
+        <file>
+            <outputDirectory>/etc</outputDirectory>
+            <source>${basedir}/../${groupId}.conf/src/main/resources/system.properties.tpml</source>
+            <destName>system.properties</destName>
+        </file>
+    </files>
 </assembly>
