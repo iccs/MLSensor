@@ -1,7 +1,9 @@
 package eu.alertproject.iccs.mlsensor.connector.producer;
 
 import eu.alertproject.iccs.events.alert.MailingList;
+import eu.alertproject.iccs.events.api.ActiveMQMessageBroker;
 import eu.alertproject.iccs.events.api.EventFactory;
+import org.apache.commons.io.IOUtils;
 import org.apache.commons.lang.StringUtils;
 import org.apache.commons.lang.time.DateUtils;
 import org.slf4j.Logger;
@@ -12,6 +14,8 @@ import javax.jms.JMSException;
 import javax.jms.Message;
 import javax.jms.Session;
 import javax.jms.TextMessage;
+import java.io.FileOutputStream;
+import java.io.IOException;
 import java.text.ParseException;
 import java.util.Scanner;
 
@@ -20,26 +24,21 @@ import java.util.Scanner;
  * Date: 04/11/11
  * Time: 20:13
  */
-public class MailMessageCreator implements MessageCreator {
+public class MailMessageCreator{
+
 
     private Logger logger = LoggerFactory.getLogger(MailMessageCreator.class);
 
     private String message;
     
-    private int id = 0;
-    private int sequence = 0;
-
     public MailMessageCreator(String message){
         this.message = message;
     }
 
-
-    @Override
-    public Message createMessage(Session session) throws JMSException {
+    public String createMessage(ActiveMQMessageBroker broker) throws JMSException {
 
         long start = System.currentTimeMillis();
-
-        TextMessage m= session.createTextMessage();
+        String ret= "";
 
         logger.trace(message);
 
@@ -97,28 +96,23 @@ public class MailMessageCreator implements MessageCreator {
 
             mailingList.setMessageId(messageId);
 
-            
 
+            long end = System.currentTimeMillis();
 
-
-            m.setText(
-                    EventFactory.createMlSensorMailNewEvent(
-                            id++,
+            ret = EventFactory.createMlSensorMailNewEvent(
+                            broker.requestEventId(),
                             start,
-                            System.currentTimeMillis(),
-                            sequence++,
-                            mailingList));
+                            end,
+                            broker.requestSequence(),
+                            mailingList);
+
+
 
         }catch (ParseException e){
             logger.warn("Couldn't parse date");
         }
 
-        logger.trace("---------------- START --------------  " +
-                    "Create json string " +
-                    "\n\n\n" +
-                    "{}" +
-                    "\n\n---------------- END -------------- \n",m.getText());
 
-        return m;
+        return ret;
     }
 }

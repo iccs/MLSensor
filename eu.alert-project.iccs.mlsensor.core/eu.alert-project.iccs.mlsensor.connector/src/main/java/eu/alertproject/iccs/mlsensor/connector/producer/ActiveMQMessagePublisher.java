@@ -1,12 +1,12 @@
 package eu.alertproject.iccs.mlsensor.connector.producer;
 
+import eu.alertproject.iccs.events.api.ActiveMQMessageBroker;
 import eu.alertproject.iccs.events.api.Topics;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.jms.JmsException;
-import org.springframework.jms.core.JmsTemplate;
-import org.springframework.stereotype.Component;
+
+import javax.jms.JMSException;
 
 
 /**
@@ -14,28 +14,25 @@ import org.springframework.stereotype.Component;
  * Date: 04/11/11
  * Time: 19:41
  */
-@Component("mlMessagePublisher")
 public class ActiveMQMessagePublisher implements MLMessagePublisher{
 
     private Logger logger = LoggerFactory.getLogger(ActiveMQMessagePublisher.class);
 
     @Autowired
-    private JmsTemplate template;
+    ActiveMQMessageBroker messageBroker;
 
-
-    private int messageCount = 0;
     @Override
     public void sendMessage(String message){
-        logger.trace("void sendMessage() {} ",message);
-
         try {
-            template.send(
-                    Topics.ALERT_MLSensor_Mail_New,
-                    new MailMessageCreator(message)
+
+            MailMessageCreator messageCreator = new MailMessageCreator(message);
+            messageBroker.sendTextMessage(
+                    Topics.ALERT_MLSensor_Mail_New,messageCreator.createMessage(messageBroker)
             );
-            logger.debug("Sending message {} ",messageCount++);
-        } catch (JmsException e) {
-            logger.warn("Error sending message {} ",message);
+
+
+        } catch (JMSException e) {
+            logger.error("Error creating message {} ", message, e);
         }
 
     }

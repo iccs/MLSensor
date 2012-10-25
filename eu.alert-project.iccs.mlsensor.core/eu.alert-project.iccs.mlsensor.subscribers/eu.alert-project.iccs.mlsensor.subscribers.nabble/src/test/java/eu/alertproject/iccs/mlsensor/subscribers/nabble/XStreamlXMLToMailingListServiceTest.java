@@ -5,6 +5,7 @@ import eu.alertproject.iccs.mlsensor.subscribers.nabble.internal.XstreamXMLToMai
 import junit.framework.Assert;
 import org.apache.commons.io.IOUtils;
 import org.junit.Test;
+import org.xml.sax.SAXParseException;
 
 import java.io.IOException;
 
@@ -35,6 +36,13 @@ public class XStreamlXMLToMailingListServiceTest {
 
     }
 
+    @Test
+    public void testEncoding() throws SAXParseException{
+
+
+
+
+    }
     @Test
     public void fromXmlIgnore() throws IOException{
 

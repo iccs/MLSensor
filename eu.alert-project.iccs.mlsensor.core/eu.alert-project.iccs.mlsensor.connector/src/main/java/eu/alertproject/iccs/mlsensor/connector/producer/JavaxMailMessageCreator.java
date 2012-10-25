@@ -1,13 +1,12 @@
 package eu.alertproject.iccs.mlsensor.connector.producer;
 
-import eu.alertproject.iccs.events.alert.MailingList;
-import eu.alertproject.iccs.events.api.EventFactory;
+import eu.alertproject.iccs.events.api.ActiveMQMessageBroker;
+import eu.alertproject.iccs.events.api.DataMessageCreator;
 import org.apache.commons.lang.ArrayUtils;
 import org.apache.commons.lang.time.DateFormatUtils;
 import org.apache.commons.lang.time.DateUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.jms.core.MessageCreator;
 
 import javax.jms.JMSException;
 import javax.jms.Message;
@@ -27,15 +26,16 @@ import java.util.Date;
  * Date: 07/12/11
  * Time: 21:17
  */
-public abstract class JavaxMailMessageCreator implements MessageCreator {
+public abstract class JavaxMailMessageCreator implements DataMessageCreator {
     private Logger logger = LoggerFactory.getLogger(JavaxMailMessageCreator.class);
 
     private javax.mail.Message message;
-    private Integer id = 0;
-    private Integer sequence=0;
+    private ActiveMQMessageBroker broker;
 
-    public JavaxMailMessageCreator(javax.mail.Message message) {
+
+    public JavaxMailMessageCreator(javax.mail.Message message, ActiveMQMessageBroker broker) {
         this.message = message;
+        this.broker = broker;
     }
 
     @Override
@@ -89,8 +89,8 @@ public abstract class JavaxMailMessageCreator implements MessageCreator {
 
             m = handle(
                     session,
-                    id++,
-                    sequence++,
+                    broker.requestEventId(),
+                    broker.requestSequence(),
                     start,
                     from,
                     date,

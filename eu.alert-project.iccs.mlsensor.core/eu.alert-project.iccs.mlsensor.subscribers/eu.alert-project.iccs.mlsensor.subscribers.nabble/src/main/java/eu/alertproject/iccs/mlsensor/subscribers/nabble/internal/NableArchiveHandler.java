@@ -41,8 +41,8 @@ public class NableArchiveHandler {
     private Pattern compile = Pattern.compile("^\\s+<td><A href=\"(.*)\">.*</a></td>");
 
 
-    private int id = 123412341;
-    private int sequence = 123412341;
+    private int id = 1;
+    private int sequence = 1;
 
 
     @Autowired
@@ -77,16 +77,16 @@ public class NableArchiveHandler {
                 logger.trace("void start() {} ",z.getName());
                 if(z.getName().endsWith(".xml")){
 
-                    String xml = IOUtils.toString(zipFile.getInputStream(z));
+                    String xml = IOUtils.toString(zipFile.getInputStream(z),"UTF-8");
 
                     MailingList mailingList = xmlToMailingListService.fromXml(xml);
                     if(mailingList != null){
 
-                        String mlSensorMailNewEvent = EventFactory.createMlSensorForumNewEvent(
-                                id,
+                        String mlSensorMailNewEvent = EventFactory.createMlSensorMailNewEvent(
+                                id++,
                                 start,
                                 System.currentTimeMillis(),
-                                sequence,
+                                sequence++,
                                 mailingList);
 
                         logger.trace("TextMessage handle() Generated {} ",mlSensorMailNewEvent);

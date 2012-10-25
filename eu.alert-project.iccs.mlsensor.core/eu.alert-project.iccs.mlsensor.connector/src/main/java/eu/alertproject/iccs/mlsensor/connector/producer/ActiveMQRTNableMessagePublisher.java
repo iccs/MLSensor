@@ -1,6 +1,7 @@
 package eu.alertproject.iccs.mlsensor.connector.producer;
 
 import eu.alertproject.iccs.events.alert.MailingList;
+import eu.alertproject.iccs.events.api.ActiveMQMessageBroker;
 import eu.alertproject.iccs.events.api.EventFactory;
 import eu.alertproject.iccs.events.api.Topics;
 import eu.alertproject.iccs.mlsensor.connector.services.ForumUrlExtractionService;
@@ -10,18 +11,13 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jms.JmsException;
-import org.springframework.jms.core.JmsTemplate;
 import org.springframework.scheduling.annotation.Scheduled;
 
-import javax.annotation.PostConstruct;
 import javax.jms.JMSException;
 import javax.jms.Session;
 import javax.jms.TextMessage;
 import javax.mail.Message;
 import java.util.Date;
-import java.util.Properties;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 /**
  * Created by IntelliJ IDEA.
@@ -34,7 +30,8 @@ public class ActiveMQRTNableMessagePublisher extends AbstractMLRealTimeMessagePu
     private Logger logger = LoggerFactory.getLogger(ActiveMQRTNableMessagePublisher.class);
 
     @Autowired
-    private JmsTemplate template;
+    ActiveMQMessageBroker messageBroker;
+
 
     @Autowired
     private ForumUrlExtractionService forumUrlExtractionService;
@@ -42,7 +39,6 @@ public class ActiveMQRTNableMessagePublisher extends AbstractMLRealTimeMessagePu
     @Autowired
     MailService mailService;
 
-    private int messageCount =0;
 
 
     @Override
@@ -60,9 +56,10 @@ public class ActiveMQRTNableMessagePublisher extends AbstractMLRealTimeMessagePu
 
                 boolean handle = false;
                 try {
-                    template.send(
+                    messageBroker.sendMessage(
                             Topics.ALERT_MLSensor_Mail_New,
-                            new JavaxMailMessageCreator(message){
+                            new JavaxMailMessageCreator(message, messageBroker) {
+                                private String raw;
 
                                 @Override
                                 public TextMessage handle(Session session, int id, int sequence, long start, String from, Date date, String subject, String content, String messageId, String references) throws JMSException {
@@ -81,25 +78,24 @@ public class ActiveMQRTNableMessagePublisher extends AbstractMLRealTimeMessagePu
                                     //extract forum from
                                     mailingList.setUrl(forumUrlExtractionService.extractUrl(content));
 
-                                    String mlSensorMailNewEvent = EventFactory.createMlSensorForumNewEvent(
+                                    raw = EventFactory.createMlSensorForumNewEvent(
                                             id,
                                             start,
                                             System.currentTimeMillis(),
                                             sequence,
                                             mailingList);
 
-                                    logger.trace("TextMessage handle() Generated {} ",mlSensorMailNewEvent);
-                                    m.setText(mlSensorMailNewEvent);
-
-
-
-
+                                    m.setText(raw);
                                     return m;
                                 }
+
+                                @Override
+                                public String getRawData() {
+                                    return raw;
+                                }
                             }
+
                     );
-                    messageCount++;
-                    logger.debug("Sending message {} ",messageCount);
 
                     handle=true;
                 } catch (JmsException e) {

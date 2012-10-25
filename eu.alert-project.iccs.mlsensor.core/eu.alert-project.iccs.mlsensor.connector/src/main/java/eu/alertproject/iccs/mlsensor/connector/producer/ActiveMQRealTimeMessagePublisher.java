@@ -1,6 +1,7 @@
 package eu.alertproject.iccs.mlsensor.connector.producer;
 
 import eu.alertproject.iccs.events.alert.MailingList;
+import eu.alertproject.iccs.events.api.ActiveMQMessageBroker;
 import eu.alertproject.iccs.events.api.EventFactory;
 import eu.alertproject.iccs.events.api.Topics;
 import eu.alertproject.iccs.mlsensor.mail.api.MailService;
@@ -9,7 +10,6 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jms.JmsException;
-import org.springframework.jms.core.JmsTemplate;
 import org.springframework.scheduling.annotation.Scheduled;
 
 import javax.jms.JMSException;
@@ -27,14 +27,14 @@ public class ActiveMQRealTimeMessagePublisher extends AbstractMLRealTimeMessageP
 
     private Logger logger = LoggerFactory.getLogger(ActiveMQRealTimeMessagePublisher.class);
 
+
     @Autowired
-    private JmsTemplate template;
+    ActiveMQMessageBroker messageBroker;
 
     @Autowired
     MailService mailService;
 
 
-    private int messageCount =0;
 
     @Override
     @Scheduled(fixedDelay = 15000)
@@ -50,9 +50,11 @@ public class ActiveMQRealTimeMessagePublisher extends AbstractMLRealTimeMessageP
 
                 boolean handle = false;
                 try {
-                    template.send(
+                    messageBroker.sendMessage(
                             Topics.ALERT_MLSensor_Mail_New,
-                            new JavaxMailMessageCreator(message){
+                            new JavaxMailMessageCreator(message,messageBroker){
+
+                                private String raw;
 
                                 @Override
                                 public TextMessage handle(Session session, int id, int sequence, long start, String from, Date date, String subject, String content, String messageId, String references) throws JMSException {
@@ -66,19 +68,23 @@ public class ActiveMQRealTimeMessagePublisher extends AbstractMLRealTimeMessageP
                                     mailingList.setContent(content);
                                     mailingList.setMessageId(messageId);
                                     mailingList.setReference(references);
-                                    m.setText(
-                                            EventFactory.createMlSensorMailNewEvent(
-                                                    id,
-                                                    start,
-                                                    System.currentTimeMillis(),
-                                                    sequence,
-                                                    mailingList));
+                                    raw = EventFactory.createMlSensorMailNewEvent(
+                                            id,
+                                            start,
+                                            System.currentTimeMillis(),
+                                            sequence,
+                                            mailingList);
+                                    m.setText(raw);
                                     return m;
                                 }
+
+                                @Override
+                                public String getRawData() {
+                                    return raw;
+                                }
                             }
+
                     );
-                    messageCount++;
-                    logger.debug("Sending message {} ",messageCount);
 
                     handle=true;
                 } catch (JmsException e) {
@@ -90,6 +96,4 @@ public class ActiveMQRealTimeMessagePublisher extends AbstractMLRealTimeMessageP
             }
         });
     }
-
-
 }

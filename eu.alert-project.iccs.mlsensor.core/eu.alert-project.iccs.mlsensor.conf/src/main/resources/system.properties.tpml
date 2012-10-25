@@ -6,21 +6,28 @@ activemq.url=tcp://localhost:61616
 activemq.userName=
 activemq.password=
 
+
 ############################################################################
-#                        Parsers
+#                        Runner
 ############################################################################
 
-
-########################## Mail Man #######################################
+runner= eu.alertproject.iccs.mlsensor.subscribers.api.MailManRunner
+#For Mailman Only
 mailParser=eu.alertproject.iccs.mlsensor.parsers.MailManParser
-
-
-############################################################################
-############################################################################
-
 subscribers.mailman.downloader=eu.alertproject.iccs.mlsensor.subscribers.mailman.internal.MailManDownloaderImpl
-subscribers.mailman.url=http://mail.kde.org/pipermail/kde-hardware-devel
-#subscribers.mailman.url=optimis
+#subscribers.mailman.url=http://mail.kde.org/pipermail/kde-hardware-devel
+subscribers.mailman.url=http://pandora.atosorigin.es/pipermail/optimis-wp33-copia/
+
+
+
+#runner= eu.alertproject.iccs.mlsensor.subscribers.nabble.api.NabbleRunner
+#For Nable Only
+runner.nable.dir=/Users/fotis/.dropbox-alt/Dropbox/Library/Projects/2010 IST FP7 5th -ALERT (63-727)/00 - material/db/Petals/
+runner.nable.xmlservice=eu.alertproject.iccs.mlsensor.subscribers.nabble.internal.XstreamXMLToMailingListService
+
+
+
+
 
 
 
@@ -31,8 +38,6 @@ subscribers.mailman.url=http://mail.kde.org/pipermail/kde-hardware-devel
 
 
 #realTime.publisher=eu.alertproject.iccs.mlsensor.connector.producer.ActiveMQRealTimeMessagePublisher
-
-
 realTime.publisher=eu.alertproject.iccs.mlsensor.connector.producer.ActiveMQRTNableMessagePublisher
 realTime.nable.url=http://forum.petalslink.com
 
@@ -49,7 +54,7 @@ mail.store.protocol=imaps
 mail.encoding=utf-8
 mail.imaps.host = imap.gmail.com
 mail.imaps.username = email@gmail.com
-mail.imaps.password = 1234
+mail.imaps.password =1234
 mail.imaps.folder=INBOX
 
 
@@ -62,4 +67,3 @@ mail.username=email@gmail.com
 mail.password=1234
 mail.port=465
 mail.protocol=smtps
-

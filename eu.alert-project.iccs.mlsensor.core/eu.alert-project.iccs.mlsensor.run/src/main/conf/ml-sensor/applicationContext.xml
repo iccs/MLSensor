@@ -46,41 +46,16 @@
 
 
     <!-- ActiveMQ -->
-    <bean   id="jmsConnectionFactory"
-            class="org.apache.activemq.ActiveMQConnectionFactory" >
-        <property name="brokerURL" value="${activemq.url}" />
-        <property name="userName" value="${activemq.userName}" />
-        <property name="password" value="${activemq.password}" />
-    </bean>
+    <import resource="classpath:/iccs/active-mq-connection.xml"/>
 
-    <bean id="pooledJmsConnectionFactory"
-          class="org.apache.activemq.pool.PooledConnectionFactory"
-          destroy-method="stop">
-        <property name="connectionFactory" ref="jmsConnectionFactory"/>
-    </bean>
-
-    <bean id="jmsConfig"
-          class="org.apache.camel.component.jms.JmsConfiguration">
-        <property name="connectionFactory" ref="pooledJmsConnectionFactory"/>
-        <property name="transacted" value="false"/>
-        <property name="concurrentConsumers" value="10"/>
-    </bean>
-
-    <bean id="activemq"
-          class="org.apache.activemq.camel.component.ActiveMQComponent">
-        <property name="configuration" ref="jmsConfig"/>
-    </bean>
-
-    <!-- Spring JMS Template -->
-    <bean id="jmsTemplate" class="org.springframework.jms.core.JmsTemplate">
-        <property name="connectionFactory" ref="pooledJmsConnectionFactory" />
-        <property name="pubSubDomain" value="true"/>
+    <bean id="messageBroker" class="eu.alertproject.iccs.events.api.ActiveMQMessageBroker">
+        <property name="recordOutgoing" value="${activemq.recordOutgoing}"/>
+        <property name="processDisabled" value="${activemq.processDisabled}"/>
     </bean>
 
     <bean id="mailService" class="${mail.service}"/>
     <bean id="mailParsers" class="${mailParser}"/>
-
-
+    <bean id="mlMessagePublisher" class="${archive.publisher}"/>
     <bean id="realTimeMessagePublisher" class="${realTime.publisher}"/>
     <bean id="mailDownloader" class="${subscribers.mailman.downloader}"/>
 

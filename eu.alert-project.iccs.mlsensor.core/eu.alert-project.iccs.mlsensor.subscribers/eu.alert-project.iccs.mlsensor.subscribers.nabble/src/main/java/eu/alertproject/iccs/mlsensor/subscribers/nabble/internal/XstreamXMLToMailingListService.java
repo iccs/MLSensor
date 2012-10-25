@@ -44,7 +44,8 @@ public class XstreamXMLToMailingListService implements XMLToMailingListService {
             DocumentBuilderFactory domFactory = DocumentBuilderFactory.newInstance();
             domFactory.setNamespaceAware(true); // never forget this!
             DocumentBuilder builder = domFactory.newDocumentBuilder();
-            Document doc = builder.parse(new InputSource(new StringReader(xml)));
+            Document doc = builder.parse(new InputSource(IOUtils.toInputStream(xml,"UTF-8")));
+
 
             XPathFactory factory = XPathFactory.newInstance();
             XPath xpath = factory.newXPath();
