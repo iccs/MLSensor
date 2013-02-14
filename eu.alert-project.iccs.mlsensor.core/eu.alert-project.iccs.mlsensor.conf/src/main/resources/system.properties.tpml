@@ -2,39 +2,42 @@
 #               ActiveMQ
 ##########################################################
 
+activemq.clientId=MLSensor
 activemq.url=tcp://localhost:61616
 activemq.userName=
 activemq.password=
-
+activemq.cacheLevel=3
+activemq.recoveryInterval=60000
+activemq.processDisabled=false
+activemq.recordOutgoing=true
 
 ############################################################################
 #                        Runner
 ############################################################################
 
-runner= eu.alertproject.iccs.mlsensor.subscribers.api.MailManRunner
+#runner= eu.alertproject.iccs.mlsensor.subscribers.api.MailManRunner
 #For Mailman Only
 mailParser=eu.alertproject.iccs.mlsensor.parsers.MailManParser
 subscribers.mailman.downloader=eu.alertproject.iccs.mlsensor.subscribers.mailman.internal.MailManDownloaderImpl
 #subscribers.mailman.url=http://mail.kde.org/pipermail/kde-hardware-devel
-subscribers.mailman.url=http://pandora.atosorigin.es/pipermail/optimis-wp33-copia/
+#subscribers.mailman.url=http://pandora.atosorigin.es/pipermail/optimis-wp33-copia/
 
 
 
-#runner= eu.alertproject.iccs.mlsensor.subscribers.nabble.api.NabbleRunner
+runner= eu.alertproject.iccs.mlsensor.subscribers.nabble.api.NabbleRunner
+
 #For Nable Only
-runner.nable.dir=/Users/fotis/.dropbox-alt/Dropbox/Library/Projects/2010 IST FP7 5th -ALERT (63-727)/00 - material/db/Petals/
+runner.nable.dir=
 runner.nable.xmlservice=eu.alertproject.iccs.mlsensor.subscribers.nabble.internal.XstreamXMLToMailingListService
-
-
-
-
-
-
 
 
 ############################################################################
 #                        Real Time
 ############################################################################
+
+
+#archive.publisher=eu.alertproject.iccs.mlsensor.connector.producer.ActiveMQMessagePublisher
+archive.publisher=eu.alertproject.iccs.mlsensor.connector.producer.ActiveMQNabbleMessagePublisher
 
 
 #realTime.publisher=eu.alertproject.iccs.mlsensor.connector.producer.ActiveMQRealTimeMessagePublisher
@@ -54,7 +57,7 @@ mail.store.protocol=imaps
 mail.encoding=utf-8
 mail.imaps.host = imap.gmail.com
 mail.imaps.username = email@gmail.com
-mail.imaps.password =1234
+mail.imaps.password = 1234
 mail.imaps.folder=INBOX
 
 

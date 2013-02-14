@@ -59,7 +59,15 @@
         <property name="pubSubDomain" value="true"/>
     </bean>
 
-  <bean id="mailService" class="${mail.service}"/>
+    <bean id="messageBroker" class="eu.alertproject.iccs.events.api.ActiveMQMessageBroker">
+        <property name="recordOutgoing" value="${activemq.recordOutgoing}"/>
+        <property name="processDisabled" value="${activemq.processDisabled}"/>
+
+        <property name="recordIncoming" value="false"/>
+        <property name="jmsTemplate" ref="jmsTemplate"/>
+    </bean>
+
+    <bean id="mailService" class="${mail.service}"/>
   <bean id="mailParsers" class="${mailParser}"/>
 
   <bean id="mailDownloader" class="${subscribers.mailman.downloader}"/>

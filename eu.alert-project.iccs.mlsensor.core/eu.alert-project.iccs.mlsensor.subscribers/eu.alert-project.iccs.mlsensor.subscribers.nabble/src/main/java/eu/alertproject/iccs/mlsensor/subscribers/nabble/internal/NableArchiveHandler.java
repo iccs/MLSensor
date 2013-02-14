@@ -57,6 +57,12 @@ public class NableArchiveHandler {
 
     public void handleUrls(String directory) throws IOException, ParserConfigurationException, SAXException {
 
+        if(!new File(directory).isDirectory()){
+
+            logger.warn("Couldn't find archive directory ... moving on");
+
+            return;
+        }
         //list all the file
         Collection<File> zip = FileUtils.listFiles(new File(directory), new SuffixFileFilter("zip"), FalseFileFilter.FALSE);
 

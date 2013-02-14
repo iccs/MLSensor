@@ -57,24 +57,8 @@
         <property name="jmsTemplate" ref="jmsTemplate"/>
         <property name="listenerMap">
             <util:map>
-                <entry>
-                    <key><util:constant static-field="eu.alertproject.iccs.events.api.Topics.ALERT_MLSensor_Mail_New"/></key>
-                    <ref bean="mailTestListener"/>
-                </entry>
             </util:map>
         </property>
-    </bean>
-
-    <bean id="stardomListener" class="eu.alertproject.iccs.events.activemq.ALERTDefaultMessageListenerContainer">
-        <constructor-arg>
-            <array>
-                <util:constant static-field="eu.alertproject.iccs.events.api.Topics.ALERT_MLSensor_Mail_New"/>
-            </array>
-        </constructor-arg>
-        <constructor-arg ref="messageBroker"/>
-        <constructor-arg ref="jmsConnectionFactory"/>
-        <constructor-arg value="${activemq.recoveryInterval}" />
-        <constructor-arg value="${activemq.cacheLevel}" />
     </bean>
 
 

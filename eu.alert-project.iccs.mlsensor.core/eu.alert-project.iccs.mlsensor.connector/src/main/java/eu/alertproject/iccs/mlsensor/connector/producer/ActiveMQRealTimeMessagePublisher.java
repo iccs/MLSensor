@@ -1,5 +1,6 @@
 package eu.alertproject.iccs.mlsensor.connector.producer;
 
+import eu.alertproject.iccs.events.activemq.TextMessageCreator;
 import eu.alertproject.iccs.events.alert.MailingList;
 import eu.alertproject.iccs.events.api.ActiveMQMessageBroker;
 import eu.alertproject.iccs.events.api.EventFactory;
@@ -82,9 +83,12 @@ public class ActiveMQRealTimeMessagePublisher extends AbstractMLRealTimeMessageP
                                 public String getRawData() {
                                     return raw;
                                 }
-                            }
+                            });
 
-                    );
+
+
+
+
 
                     handle=true;
                 } catch (JmsException e) {

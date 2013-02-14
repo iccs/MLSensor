@@ -41,6 +41,7 @@ public class ActiveMQRTNableMessagePublisher extends AbstractMLRealTimeMessagePu
 
 
 
+
     @Override
     @Scheduled(fixedDelay = 15000)
     public void readAndSend() {
@@ -60,6 +61,7 @@ public class ActiveMQRTNableMessagePublisher extends AbstractMLRealTimeMessagePu
                             Topics.ALERT_MLSensor_Mail_New,
                             new JavaxMailMessageCreator(message, messageBroker) {
                                 private String raw;
+
 
                                 @Override
                                 public TextMessage handle(Session session, int id, int sequence, long start, String from, Date date, String subject, String content, String messageId, String references) throws JMSException {
